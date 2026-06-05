@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>QuickCell vs QuickCell-8</title>
+<style>
+body {
+    font-family: Segoe UI, sans-serif;
+    background: #f5f7fa;
+    padding: 30px;
+    color: #2c3e50;
+}
+h1 {
+    color: #1a237e;
+    border-bottom: 3px solid #1a237e;
+    padding-bottom: 8px;
+}
+h2 {
+    color: #283593;
+    margin-top: 35px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin: 20px 0;
+}
+th, td {
+    padding: 10px 14px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+th {
+    background: #1a237e;
+    color: white;
+}
+tr:nth-child(even) {
+    background: #f9f9f9;
+}
+.note {
+    background: #fff2cc;
+    border-left: 5px solid #d6b656;
+    padding: 12px;
+    margin: 20px 0;
+}
+.warning {
+    background: #f4cccc;
+    border-left: 5px solid #cc0000;
+    padding: 12px;
+    margin: 20px 0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    background: white;
+    padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<h1>QuickCell vs QuickCell-8 Performance Report</h1>
+
+<div class="note">
+<b>QuickCell-8 definition:</b>
+This version uses 8 filters. F4, F6, F8, and F10 are removed because they caused
+over-pruning in the current toy benchmark.
+</div>
+
+<div class="warning">
+<b>Important:</b>
+This is still a debugging-scale benchmark with only 35 layouts.
+If |L*| remains zero, the issue is most likely the toy geometry/model,
+not only the pruning filters. For final paper-level results, use a calibrated
+SiDB geometry and an exact physical simulator.
+</div>
+
+<h2>1. Headline Results</h2>
+<table>
+<tr>
+<th>Function</th>
+<th>|Ld|</th>
+<th>P1</th>
+<th>P2</th>
+<th>P3</th>
+<th>|L*| 3-f</th>
+<th>t3</th>
+<th>|L*| 8-f</th>
+<th>t8</th>
+<th>Speedup</th>
+</tr>
+
+        <tr>
+            <td><b>AND</b></td>
+            <td>35</td>
+            <td>35</td>
+            <td>35</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0.0481s</td>
+            <td>0</td>
+            <td>0.0481s</td>
+            <td>1.00×</td>
+        </tr>
+        
+        <tr>
+            <td><b>OR</b></td>
+            <td>35</td>
+            <td>35</td>
+            <td>35</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0.0335s</td>
+            <td>0</td>
+            <td>0.0360s</td>
+            <td>0.93×</td>
+        </tr>
+        
+        <tr>
+            <td><b>XOR</b></td>
+            <td>35</td>
+            <td>35</td>
+            <td>35</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0.0343s</td>
+            <td>0</td>
+            <td>0.0361s</td>
+            <td>0.95×</td>
+        </tr>
+        
+        <tr>
+            <td><b>NAND</b></td>
+            <td>35</td>
+            <td>35</td>
+            <td>35</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0.0713s</td>
+            <td>0</td>
+            <td>0.0456s</td>
+            <td>1.57×</td>
+        </tr>
+        
+        <tr>
+            <td><b>NOR</b></td>
+            <td>35</td>
+            <td>35</td>
+            <td>35</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0.0462s</td>
+            <td>0</td>
+            <td>0.0528s</td>
+            <td>0.87×</td>
+        </tr>
+        
+        <tr>
+            <td><b>WIRE</b></td>
+            <td>35</td>
+            <td>35</td>
+            <td>35</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0.0693s</td>
+            <td>0</td>
+            <td>0.0858s</td>
+            <td>0.81×</td>
+        </tr>
+        
+        <tr>
+            <td><b>INV</b></td>
+            <td>35</td>
+            <td>35</td>
+            <td>35</td>
+            <td>2</td>
+            <td>2</td>
+            <td>0.0648s</td>
+            <td>2</td>
+            <td>0.0374s</td>
+            <td>1.73×</td>
+        </tr>
+        
+</table>
+
+<h2>2. Per-Filter Breakdown</h2>
+<table>
+<tr>
+<th>Function</th>
+<th>F1</th><th>F2</th><th>F3</th><th>F4</th><th>F5</th>
+<th>F6</th><th>F7</th><th>F8</th><th>F9</th>
+<th>F10</th><th>F11</th><th>F12</th>
+</tr>
+<tr><td><b>AND</b></td><td>0</td><td>0</td><td>0</td><td style='background:#fff2cc'>REM</td><td>0</td><td style='background:#fff2cc'>REM</td><td>0</td><td style='background:#fff2cc'>REM</td><td>0</td><td style='background:#fff2cc'>REM</td><td>0</td><td>35</td></tr><tr><td><b>OR</b></td><td>0</td><td>0</td><td>0</td><td style='background:#fff2cc'>REM</td><td>0</td><td style='background:#fff2cc'>REM</td><td>0</td><td style='background:#fff2cc'>REM</td><td>0</td><td style='background:#fff2cc'>REM</td><td>0</td><td>35</td></tr><tr><td><b>XOR</b></td><td>0</td><td>0</td><td>0</td><td style='background:#fff2cc'>REM</td><td>0</td><td style='background:#fff2cc'>REM</td><td>0</td><td style='background:#fff2cc'>REM</td><td>0</td><td style='background:#fff2cc'>REM</td><td>0</td><td>35</td></tr><tr><td><b>NAND</b></td><td>0</td><td>0</td><td>0</td><td style='background:#fff2cc'>REM</td><td>0</td><td style='background:#fff2cc'>REM</td><td>0</td><td style='background:#fff2cc'>REM</td><td>0</td><td style='background:#fff2cc'>REM</td><td>0</td><td>35</td></tr><tr><td><b>NOR</b></td><td>0</td><td>0</td><td>0</td><td style='background:#fff2cc'>REM</td><td>0</td><td style='background:#fff2cc'>REM</td><td>0</td><td style='background:#fff2cc'>REM</td><td>0</td><td style='background:#fff2cc'>REM</td><td>0</td><td>35</td></tr><tr><td><b>WIRE</b></td><td>0</td><td>0</td><td>0</td><td style='background:#fff2cc'>REM</td><td>0</td><td style='background:#fff2cc'>REM</td><td>0</td><td style='background:#fff2cc'>REM</td><td>0</td><td style='background:#fff2cc'>REM</td><td>0</td><td>35</td></tr><tr><td><b>INV</b></td><td>0</td><td>0</td><td>0</td><td style='background:#fff2cc'>REM</td><td>0</td><td style='background:#fff2cc'>REM</td><td>0</td><td style='background:#fff2cc'>REM</td><td>0</td><td style='background:#fff2cc'>REM</td><td>0</td><td>33</td></tr>
+</table>
+
+<h2>3. Runtime Comparison</h2>
+<img src="runtime_comparison.png">
+
+<h2>4. Search Space Reduction</h2>
+<img src="search_space_reduction.png">
+
+<h2>5. Filter Breakdown</h2>
+<img src="filter_breakdown.png">
+
+<h2>6. Correct Interpretation</h2>
+<ul>
+<li>QuickCell original uses 3 filters: F4, F11, and F12.</li>
+<li>QuickCell-8 uses 8 filters: F1, F2, F3, F5, F7, F9, F11, and F12.</li>
+<li>F4, F6, F8, and F10 are intentionally removed in this debugging version.</li>
+<li>If no valid implementation is found, the toy layout is not physically suitable for the target function.</li>
+<li>The observed speedup is a debugging/runtime effect and should not be interpreted as final scalability evidence.</li>
+</ul>
+
+</body>
+</html>
