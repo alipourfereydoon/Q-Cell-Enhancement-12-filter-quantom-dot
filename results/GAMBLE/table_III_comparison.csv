@@ -1,0 +1,8 @@
+Metric,Original QC-3,QuickCell-12,Improvement
+Number of pruning filters,3,12,4.0x more
+Processed layouts,100000,100000,same
+After early pruning / Phase 1,99409,40261,2.47x fewer
+Before expensive enumerative pruning,99409,633,157.04x fewer
+Before final verification,6638,2,3319.00x fewer
+Candidate implementations,6638,2,3319.00x fewer
+Search-space reduction,15.0648,50000.0,3319.00x fewer

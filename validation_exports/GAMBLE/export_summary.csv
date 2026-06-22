@@ -1,0 +1,3 @@
+gate,candidate_id,energy_margin,canvas_indices,candidate_json,candidate_csv,candidate_sqd
+GAMBLE,1,-5.076683384341862e-06,37 62 96 104,validation_exports\GAMBLE\candidates\candidate_000001\candidate.json,validation_exports\GAMBLE\candidates\candidate_000001\all_sidbs.csv,validation_exports\GAMBLE\candidates\candidate_000001\candidate.sqd
+GAMBLE,2,-2.6664932259556906e-05,25 62 68 104,validation_exports\GAMBLE\candidates\candidate_000002\candidate.json,validation_exports\GAMBLE\candidates\candidate_000002\all_sidbs.csv,validation_exports\GAMBLE\candidates\candidate_000002\candidate.sqd

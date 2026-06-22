@@ -1,0 +1,11 @@
+gate,samples_requested,samples_processed,raw_post_f12_candidates,exported_candidates,elapsed_seconds,validation_sheet,profile,d_min,io_margin,connectivity_radius,pressure_margin,energy_margin,f11_mode,f11_min_support_states
+AND3,100000,100000,3,3,681.2936997413635,validation_exports\AND3\validation_sheet.csv,balanced,3.5,7e-05,9.0,0.001,0.005,strict-hop,1
+XOR-AND,100000,100000,8,8,1265.8612349033356,validation_exports\XOR-AND\validation_sheet.csv,balanced,3.5,7e-05,9.0,0.001,0.005,strict-hop,1
+OR-AND,100000,100000,8,8,1262.537439584732,validation_exports\OR-AND\validation_sheet.csv,balanced,3.5,7e-05,9.0,0.001,0.005,strict-hop,1
+ONEHOT,100000,100000,2,2,626.8815166950226,validation_exports\ONEHOT\validation_sheet.csv,balanced,3.5,7e-05,9.0,0.001,0.005,strict-hop,1
+MAJ,100000,100000,3,3,582.1733977794647,validation_exports\MAJ\validation_sheet.csv,balanced,3.5,7e-05,9.0,0.001,0.005,strict-hop,1
+GAMBLE,100000,100000,2,2,518.0748505592346,validation_exports\GAMBLE\validation_sheet.csv,balanced,3.5,7e-05,9.0,0.001,0.005,strict-hop,1
+DOT,100000,100000,7,7,1105.0353519916534,validation_exports\DOT\validation_sheet.csv,balanced,3.5,7e-05,9.0,0.001,0.005,strict-hop,1
+ITE,100000,100000,7,7,1309.6436636447906,validation_exports\ITE\validation_sheet.csv,balanced,3.5,7e-05,9.0,0.001,0.005,strict-hop,1
+AND-XOR,100000,100000,7,7,1291.583404302597,validation_exports\AND-XOR\validation_sheet.csv,balanced,3.5,7e-05,9.0,0.001,0.005,strict-hop,1
+XOR3,100000,100000,2,2,562.2319457530975,validation_exports\XOR3\validation_sheet.csv,balanced,3.5,7e-05,9.0,0.001,0.005,strict-hop,1

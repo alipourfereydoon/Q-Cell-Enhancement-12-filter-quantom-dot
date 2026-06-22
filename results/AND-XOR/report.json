@@ -1,0 +1,222 @@
+{
+  "gate": "AND-XOR",
+  "full_ld": 16701685,
+  "total": {
+    "processed": 100000,
+    "qc12_after": [
+      85282,
+      85282,
+      80504,
+      80175,
+      58857,
+      29353,
+      8925,
+      4485,
+      1957,
+      1321,
+      1321,
+      7
+    ],
+    "qc12_passed": [
+      [
+        54,
+        62,
+        80,
+        127
+      ],
+      [
+        62,
+        80,
+        89,
+        97
+      ],
+      [
+        25,
+        62,
+        68,
+        104
+      ],
+      [
+        62,
+        80,
+        100,
+        138
+      ],
+      [
+        37,
+        62,
+        96,
+        104
+      ],
+      [
+        50,
+        84,
+        101,
+        114
+      ],
+      [
+        52,
+        58,
+        84,
+        115
+      ]
+    ],
+    "qc3_after_f4": 99409,
+    "qc3_after_f11": 99409,
+    "qc3_after_f12": 6639,
+    "selected_candidates": 7
+  },
+  "elapsed": 1605.2606689929962,
+  "selection_enabled": false,
+  "table_I": [
+    {
+      "Benchmark": "AND-XOR",
+      "|Ld|": 16701685,
+      "Processed": 100000,
+      "After F1": 85282,
+      "After F2": 85282,
+      "After F3": 80504,
+      "After F4": 80175,
+      "After F5": 58857,
+      "After F6": 29353,
+      "After F7": 8925,
+      "After F8": 4485,
+      "After F9": 1957,
+      "After F10": 1321,
+      "After F11": 1321,
+      "After F12": 7,
+      "Selected Candidates": "",
+      "Candidates": 7,
+      "Total Time [s]": 1605.2607
+    }
+  ],
+  "table_II": [
+    {
+      "Phase": "Phase 1",
+      "Filters": "F1-F4",
+      "Input Layouts": 100000,
+      "Output Layouts": 80175,
+      "Retention Ratio [%]": 80.175,
+      "Pruning Ratio [%]": 19.825,
+      "Reduction Factor": 1.2473,
+      "Runtime [s]": ""
+    },
+    {
+      "Phase": "Phase 2",
+      "Filters": "F5-F10",
+      "Input Layouts": 80175,
+      "Output Layouts": 1321,
+      "Retention Ratio [%]": 1.6476,
+      "Pruning Ratio [%]": 98.3524,
+      "Reduction Factor": 60.6927,
+      "Runtime [s]": ""
+    },
+    {
+      "Phase": "Phase 3",
+      "Filters": "F11-F12",
+      "Input Layouts": 1321,
+      "Output Layouts": 7,
+      "Retention Ratio [%]": 0.5299,
+      "Pruning Ratio [%]": 99.4701,
+      "Reduction Factor": 188.7143,
+      "Runtime [s]": ""
+    },
+    {
+      "Phase": "Total",
+      "Filters": "F1-F12",
+      "Input Layouts": 100000,
+      "Output Layouts": 7,
+      "Retention Ratio [%]": 0.007,
+      "Pruning Ratio [%]": 99.993,
+      "Reduction Factor": 14285.7143,
+      "Runtime [s]": 1605.2607
+    }
+  ],
+  "table_III": [
+    {
+      "Metric": "Number of pruning filters",
+      "Original QC-3": 3,
+      "QuickCell-12": 12,
+      "Improvement": "4.0x more"
+    },
+    {
+      "Metric": "Processed layouts",
+      "Original QC-3": 100000,
+      "QuickCell-12": 100000,
+      "Improvement": "same"
+    },
+    {
+      "Metric": "After early pruning / Phase 1",
+      "Original QC-3": 99409,
+      "QuickCell-12": 80175,
+      "Improvement": "1.24x fewer"
+    },
+    {
+      "Metric": "Before expensive enumerative pruning",
+      "Original QC-3": 99409,
+      "QuickCell-12": 1321,
+      "Improvement": "75.25x fewer"
+    },
+    {
+      "Metric": "Before final verification",
+      "Original QC-3": 6639,
+      "QuickCell-12": 7,
+      "Improvement": "948.43x fewer"
+    },
+    {
+      "Metric": "Candidate implementations",
+      "Original QC-3": 6639,
+      "QuickCell-12": 7,
+      "Improvement": "948.43x fewer"
+    },
+    {
+      "Metric": "Search-space reduction",
+      "Original QC-3": 15.0625,
+      "QuickCell-12": 14285.7143,
+      "Improvement": "948.43x fewer"
+    }
+  ],
+  "speedup": [
+    {
+      "Quantity": "Processed layouts",
+      "Value": 100000
+    },
+    {
+      "Quantity": "Full search space |Ld|",
+      "Value": 16701685
+    },
+    {
+      "Quantity": "Input patterns for 3-input gate",
+      "Value": 8
+    },
+    {
+      "Quantity": "Assumed simulation time per layout/input [s]",
+      "Value": 0.01
+    },
+    {
+      "Quantity": "Estimated brute-force time for processed sample [s]",
+      "Value": 8000.0
+    },
+    {
+      "Quantity": "Estimated brute-force time for full |Ld| [s]",
+      "Value": 1336134.8
+    },
+    {
+      "Quantity": "QC-3 candidates before verification",
+      "Value": 6639
+    },
+    {
+      "Quantity": "QuickCell-12 candidates before verification",
+      "Value": 7
+    },
+    {
+      "Quantity": "QuickCell-12 candidate reduction over QC-3",
+      "Value": "948.4286x"
+    },
+    {
+      "Quantity": "Measured QuickCell-12 wall time [s]",
+      "Value": 1605.2607
+    }
+  ],
+  "selected_candidates": []
+}
