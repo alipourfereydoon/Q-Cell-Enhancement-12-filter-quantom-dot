@@ -160,15 +160,6 @@ This significantly reduces the search space and computational cost before SiQAD 
 
 ## 📚 Citation
 
-If you use this project in your research, please cite:
-
-```bibtex
-@misc{QuickCell12,
-  title={QuickCell-12: Physics-Based Pruning Framework for Silicon Dangling Bond Logic Cell Discovery},
-  year={2026}
-}
-```
-
 ---
 
 ## 📄 License
