@@ -1,298 +1,193 @@
-Hero Section
-│
-├── Badges
-├── Logo
-├── Abstract
-├── Research Highlights
-│
-├── Architecture
-│
-├── Quick Start
-│
-├── Installation
-│
-├── Repository Layout
-│
-├── Theory
-│
-├── Phase I
-│
-├── Phase II
-│
-├── Phase III
-│
-├── Filter Summary
-│
-├── Complete Pipeline
-│
-├── Complexity Analysis
-│
-├── Supported Gates
-│
-├── Parameter Guide
-│
-├── Running Examples
-│
-├── Results
-│
-├── SiQAD Export
-│
-├── Citation
-│
-├── Roadmap
-│
-├── License
-│
-└── Contact
-██████╗ ██╗   ██╗██╗ ██████╗██╗  ██╗ ██████╗███████╗██╗     ██╗
-██╔══██╗██║   ██║██║██╔════╝██║ ██╔╝██╔════╝██╔════╝██║     ██║
-██████╔╝██║   ██║██║██║     █████╔╝ ██║     █████╗  ██║     ██║
-██╔═══╝ ██║   ██║██║██║     ██╔═██╗ ██║     ██╔══╝  ██║     ██║
-██║     ╚██████╔╝██║╚██████╗██║  ██╗╚██████╗███████╗███████╗███████╗
-╚═╝      ╚═════╝ ╚═╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝╚══════╝╚══════╝╚══════╝
 
-Physics-Based Pruning Framework
-for Silicon Dangling Bond Logic Cell Discovery
-![Python](https://img.shields.io/badge/python-3.11-blue)
+# ⚛️ QuickCell-12
 
-![Research](https://img.shields.io/badge/Research-Atomic%20Computing-red)
+> **Physics-Based Pruning Framework for Silicon Dangling Bond (SiDB) Logic Cell Discovery**
 
-![License](https://img.shields.io/badge/license-MIT-green)
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Research](https://img.shields.io/badge/Research-SiDB-red)
+![Status](https://img.shields.io/badge/Status-Research-orange)
 
-![Platform](https://img.shields.io/badge/Linux-Windows-lightgrey)
+---
 
-![SiQAD](https://img.shields.io/badge/Compatible-SiQAD-orange)
+## 📖 Overview
 
-![Parallel](https://img.shields.io/badge/Parallel-Multiprocessing-success)
+QuickCell-12 is a research framework for discovering **Silicon Dangling Bond (SiDB)** logic cells using a multi-stage physics-aware pruning strategy.
 
-![Status](https://img.shields.io/badge/status-Research-blueviolet)
-graph TD
+Instead of performing expensive electrostatic simulations for every candidate layout, QuickCell-12 progressively removes infeasible layouts through a sequence of analytical filters before physical validation.
 
-A(Random Candidate Generator)
+The framework supports both **2-input** and **3-input** logic gates and exports final candidates for **SiQAD** validation.
 
-B(Phase I)
+---
 
-C(Phase II)
+## ✨ Features
 
-D(Phase III)
+- Physics-based pruning
+- Electrostatic analysis
+- Parallel candidate evaluation
+- SiQAD export
+- Configurable pruning parameters
+- Automatic report generation
+- Support for 1, 2 and 3-input logic gates
 
-E(Ranking)
+---
 
-F(SiQAD)
+## 🏗 Pipeline
 
-A --> B
+```text
+Random Layout Generation
+          │
+          ▼
+ Phase I  (Geometric Filters)
+          │
+          ▼
+ Phase II (Electrostatic Filters)
+          │
+          ▼
+ Phase III (Physical Validation)
+          │
+          ▼
+ Candidate Ranking
+          │
+          ▼
+      SiQAD Export
+```
 
-B --> C
+---
 
-C --> D
+## 🔬 Filter Overview
 
-D --> E
+| Filter | Description |
+|---------|-------------|
+| F1 | Minimum Distance Pruning |
+| F2 | Duplicate Layout Removal |
+| F3 | Connectivity Check |
+| F4 | Positive Charge Pruning |
+| F5 | Charge Count Bound |
+| F6 | Input Disturbance |
+| F7 | Electrostatic Connectivity |
+| F8 | Output Potential Bound |
+| F9 | Output Pressure |
+| F10 | Energy Bound |
+| F11 | Physical Feasibility |
+| F12 | I/O Stability |
 
-E --> F
-flowchart LR
+---
 
-F1 --> F2
+## 📂 Repository Structure
 
-F2 --> F3
-
-F3 --> F4
-
-F4 --> F5
-
-F5 --> F6
-
-F6 --> F7
-
-F7 --> F8
-
-F8 --> F9
-
-F9 --> F10
-
-F10 --> F11
-
-F11 --> F12
-
-F12 --> Export
-┌────────────────────────────┐
-│ Phase I                    │
-│ Geometric Pruning          │
-└─────────────┬──────────────┘
-              │
-              ▼
-┌────────────────────────────┐
-│ Phase II                   │
-│ Electrostatic Analysis     │
-└─────────────┬──────────────┘
-              │
-              ▼
-┌────────────────────────────┐
-│ Phase III                  │
-│ Physical Verification      │
-└─────────────┬──────────────┘
-              │
-              ▼
-        Final Candidates
-
-        | Filter | Name                | Type          | Complexity |
-| ------ | ------------------- | ------------- | ---------- |
-| F1     | Distance            | Geometry      | O(d²)      |
-| F2     | Duplicate           | Geometry      | O(n log n) |
-| F3     | Connectivity        | Geometry      | O(V+E)     |
-| F4     | Positive Charge     | Electrostatic | O(n)       |
-| F5     | Charge Count        | Electrostatic | O(2ⁿ)      |
-| F6     | Input Disturbance   | Electrostatic | O(n²)      |
-| F7     | Connectivity Radius | Electrostatic | O(V+E)     |
-| F8     | Output Potential    | Electrostatic | O(n)       |
-| F9     | Pressure            | Electrostatic | O(n)       |
-| F10    | Energy              | Electrostatic | O(n)       |
-| F11    | Physical Validation | Simulation    | O(S)       |
-| F12    | I/O Stability       | Simulation    | O(S)       |
-
+```text
 QuickCell-12/
-
+│
 ├── filters/
-
-│   ├── phase1/
-
-│   ├── phase2/
-
-│   └── phase3/
-
 ├── exporters/
-
 ├── reports/
-
 ├── validation/
-
 ├── utils/
+├── run_gate_report.py
+├── export_siqad_validation.py
+└── README.md
+```
 
-├── docs/
+---
 
-├── figures/
+## 🚀 Usage
 
-├── examples/
+Run a single gate:
 
-├── results/
+```bash
+python run_gate_report.py --gate AND3
+```
 
-└── README.mdmindmap
+Run all gates:
 
-root((Parameters))
+```bash
+python run_gate_report.py --gate ALL
+```
 
-Distance
+Export layouts for SiQAD:
 
-d-min
+```bash
+python export_siqad_validation.py --gate ALL
+```
 
-Connectivity
+---
 
-Radius
+## ⚙ Supported Gates
 
-Charge
+### 2-Input Gates
 
-Min Fraction
+- AND
+- NAND
+- OR
+- NOR
+- XOR
+- XNOR
+- LT
+- GT
+- LE
+- GE
+- CX
+- HALF ADDER
+- DOUBLE WIRE
+- WIRE
+- INV
 
-Max Fraction
+### 3-Input Gates
 
-Energy
+- AND3
+- XOR3
+- MAJ
+- ONEHOT
+- ITE
+- DOT
+- GAMBLE
+- XOR-AND
+- OR-AND
+- AND-XOR
 
-Margin
+---
 
-Pressure
+## 📊 Design Philosophy
 
-Margin
+QuickCell-12 follows a **conservative pruning strategy**.
 
-I/O
+Each filter removes layouts that violate physical or electrostatic constraints while preserving potentially valid candidates for later validation.
 
-Margin
+This significantly reduces the search space and computational cost before SiQAD simulation.
 
-Simulation
+---
 
-Workers
+## 📚 Citation
 
-Samples
+If you use this project in your research, please cite:
 
-sequenceDiagram
+```bibtex
+@misc{QuickCell12,
+  title={QuickCell-12: Physics-Based Pruning Framework for Silicon Dangling Bond Logic Cell Discovery},
+  year={2026}
+}
+```
 
-User->>Generator: Generate Layouts
+---
 
-Generator->>Phase1: Geometry Filters
+## 📄 License
 
-Phase1->>Phase2: Electrostatic Filters
+This project is released under the MIT License.
 
-Phase2->>Phase3: Physical Filters
+---
 
-Phase3->>Ranking: Candidate Ranking
+## ⭐ Acknowledgment
 
-Ranking->>Exporter: Export SiQAD
+QuickCell-12 was developed for research in:
 
-Exporter->>User: Layout Files
+- Silicon Dangling Bond Computing
+- Atomic-Scale Logic Design
+- Nanoelectronics
+- Physics-Aware Design Automation
 
-| Stage                | Complexity           |
-| -------------------- | -------------------- |
-| Candidate Generation | O(C(n,d))            |
-| Phase I              | O(N)                 |
-| Phase II             | O(N·2ⁿ)              |
-| Phase III            | Simulation-dependent |
-| Export               | O(K)                 |
+---
 
-
-Candidates
-
-↓
-
-156,849
-
-↓
-
-18,200
-
-↓
-
-2,130
-
-↓
-
-198
-
-↓
-
-41
-
-↓
-
-7 Final Layouts
-
-docs/
-
-figures/
-
-images/
-
-README
-
-↓
-
-Gate Images
-
-↓
-
-SiQAD Layout
-
-↓
-
-Energy Diagram
-
-↓
-
-Filter Pipeline
-_____________________________________________________________
-
-Developed for Atomic Scale Logic Synthesis
-
-Silicon Dangling Bond Computing
-
-Nanoelectronics
-
-Quantum-inspired CAD
-
-_____________________________________________________________
+<p align="center">
+Made with ❤️ for Atomic-Scale Computing
+</p>
