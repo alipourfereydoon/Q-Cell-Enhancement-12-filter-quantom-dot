@@ -1,0 +1,460 @@
+{
+  "gate": "AND",
+  "candidate_id": 13,
+  "canvas_indices": [
+    71,
+    85,
+    96
+  ],
+  "input_pins": [
+    {
+      "pin_index": 0,
+      "pos_a": [
+        -11.52,
+        4.833,
+        0.0
+      ],
+      "pos_b": [
+        -11.52,
+        5.601,
+        0.0
+      ],
+      "encoding": {
+        "0": {
+          "pos_a": -1,
+          "pos_b": 0
+        },
+        "1": {
+          "pos_a": 0,
+          "pos_b": -1
+        }
+      }
+    },
+    {
+      "pin_index": 1,
+      "pos_a": [
+        -11.52,
+        -5.151000000000001,
+        0.0
+      ],
+      "pos_b": [
+        -11.52,
+        -4.383000000000001,
+        0.0
+      ],
+      "encoding": {
+        "0": {
+          "pos_a": -1,
+          "pos_b": 0
+        },
+        "1": {
+          "pos_a": 0,
+          "pos_b": -1
+        }
+      }
+    }
+  ],
+  "output_pins": [
+    {
+      "pin_index": 0,
+      "pos_a": [
+        9.984,
+        0.225,
+        0.0
+      ],
+      "pos_b": [
+        9.984,
+        0.993,
+        0.0
+      ],
+      "encoding": {
+        "0": {
+          "pos_a": -1,
+          "pos_b": 0
+        },
+        "1": {
+          "pos_a": 0,
+          "pos_b": -1
+        }
+      }
+    }
+  ],
+  "wire_sidbs": [
+    [
+      -8.448,
+      4.0649999999999995,
+      0.0
+    ],
+    [
+      -5.376,
+      2.5290000000000004,
+      0.0
+    ],
+    [
+      -2.3040000000000003,
+      0.993,
+      0.0
+    ],
+    [
+      -8.448,
+      -4.383000000000001,
+      0.0
+    ],
+    [
+      -5.376,
+      -2.847,
+      0.0
+    ],
+    [
+      -2.3040000000000003,
+      -1.311,
+      0.0
+    ],
+    [
+      0.768,
+      0.225,
+      0.0
+    ],
+    [
+      3.84,
+      0.225,
+      0.0
+    ],
+    [
+      6.912,
+      0.225,
+      0.0
+    ]
+  ],
+  "canvas_sidbs": [
+    [
+      8.448,
+      0.225,
+      0.0
+    ],
+    [
+      11.52,
+      4.833,
+      0.0
+    ],
+    [
+      13.056000000000001,
+      4.833,
+      0.0
+    ]
+  ],
+  "expected_truth_table": {
+    "00": "0",
+    "01": "0",
+    "10": "0",
+    "11": "1"
+  },
+  "siqad_export_rows": [
+    {
+      "site_id": 0,
+      "kind": "skeleton_input",
+      "role": "IN0_A",
+      "pin_index": 0,
+      "x": -11.52,
+      "y": 4.833,
+      "z": 0.0,
+      "n": -30,
+      "m": 6,
+      "l": 1,
+      "siqad_x": -115.19999999999999,
+      "siqad_y": 48.33,
+      "snap_error": 0.0,
+      "export_x": -115.19999999999999,
+      "export_y": 48.33
+    },
+    {
+      "site_id": 1,
+      "kind": "skeleton_input",
+      "role": "IN0_B",
+      "pin_index": 0,
+      "x": -11.52,
+      "y": 5.601,
+      "z": 0.0,
+      "n": -30,
+      "m": 7,
+      "l": 1,
+      "siqad_x": -115.19999999999999,
+      "siqad_y": 56.01,
+      "snap_error": 0.0,
+      "export_x": -115.19999999999999,
+      "export_y": 56.01
+    },
+    {
+      "site_id": 2,
+      "kind": "skeleton_input",
+      "role": "IN1_A",
+      "pin_index": 1,
+      "x": -11.52,
+      "y": -5.151000000000001,
+      "z": 0.0,
+      "n": -30,
+      "m": -7,
+      "l": 1,
+      "siqad_x": -115.19999999999999,
+      "siqad_y": -51.51,
+      "snap_error": 0.0,
+      "export_x": -115.19999999999999,
+      "export_y": -51.51
+    },
+    {
+      "site_id": 3,
+      "kind": "skeleton_input",
+      "role": "IN1_B",
+      "pin_index": 1,
+      "x": -11.52,
+      "y": -4.383000000000001,
+      "z": 0.0,
+      "n": -30,
+      "m": -6,
+      "l": 1,
+      "siqad_x": -115.19999999999999,
+      "siqad_y": -43.83,
+      "snap_error": 0.0,
+      "export_x": -115.19999999999999,
+      "export_y": -43.83
+    },
+    {
+      "site_id": 4,
+      "kind": "skeleton_output",
+      "role": "OUT0_A",
+      "pin_index": 0,
+      "x": 9.984,
+      "y": 0.225,
+      "z": 0.0,
+      "n": 26,
+      "m": 0,
+      "l": 1,
+      "siqad_x": 99.84,
+      "siqad_y": 2.25,
+      "snap_error": 0.0,
+      "export_x": 99.84,
+      "export_y": 2.25
+    },
+    {
+      "site_id": 5,
+      "kind": "skeleton_output",
+      "role": "OUT0_B",
+      "pin_index": 0,
+      "x": 9.984,
+      "y": 0.993,
+      "z": 0.0,
+      "n": 26,
+      "m": 1,
+      "l": 1,
+      "siqad_x": 99.84,
+      "siqad_y": 9.93,
+      "snap_error": 0.0,
+      "export_x": 99.84,
+      "export_y": 9.93
+    },
+    {
+      "site_id": 6,
+      "kind": "skeleton_wire",
+      "role": "WIRE0",
+      "pin_index": "",
+      "x": -8.448,
+      "y": 4.0649999999999995,
+      "z": 0.0,
+      "n": -22,
+      "m": 5,
+      "l": 1,
+      "siqad_x": -84.47999999999999,
+      "siqad_y": 40.65,
+      "snap_error": 0.0,
+      "export_x": -84.47999999999999,
+      "export_y": 40.65
+    },
+    {
+      "site_id": 7,
+      "kind": "skeleton_wire",
+      "role": "WIRE1",
+      "pin_index": "",
+      "x": -5.376,
+      "y": 2.5290000000000004,
+      "z": 0.0,
+      "n": -14,
+      "m": 3,
+      "l": 1,
+      "siqad_x": -53.76,
+      "siqad_y": 25.29,
+      "snap_error": 0.0,
+      "export_x": -53.76,
+      "export_y": 25.29
+    },
+    {
+      "site_id": 8,
+      "kind": "skeleton_wire",
+      "role": "WIRE2",
+      "pin_index": "",
+      "x": -2.3040000000000003,
+      "y": 0.993,
+      "z": 0.0,
+      "n": -6,
+      "m": 1,
+      "l": 1,
+      "siqad_x": -23.04,
+      "siqad_y": 9.93,
+      "snap_error": 0.0,
+      "export_x": -23.04,
+      "export_y": 9.93
+    },
+    {
+      "site_id": 9,
+      "kind": "skeleton_wire",
+      "role": "WIRE3",
+      "pin_index": "",
+      "x": -8.448,
+      "y": -4.383000000000001,
+      "z": 0.0,
+      "n": -22,
+      "m": -6,
+      "l": 1,
+      "siqad_x": -84.47999999999999,
+      "siqad_y": -43.83,
+      "snap_error": 0.0,
+      "export_x": -84.47999999999999,
+      "export_y": -43.83
+    },
+    {
+      "site_id": 10,
+      "kind": "skeleton_wire",
+      "role": "WIRE4",
+      "pin_index": "",
+      "x": -5.376,
+      "y": -2.847,
+      "z": 0.0,
+      "n": -14,
+      "m": -4,
+      "l": 1,
+      "siqad_x": -53.76,
+      "siqad_y": -28.47,
+      "snap_error": 0.0,
+      "export_x": -53.76,
+      "export_y": -28.47
+    },
+    {
+      "site_id": 11,
+      "kind": "skeleton_wire",
+      "role": "WIRE5",
+      "pin_index": "",
+      "x": -2.3040000000000003,
+      "y": -1.311,
+      "z": 0.0,
+      "n": -6,
+      "m": -2,
+      "l": 1,
+      "siqad_x": -23.04,
+      "siqad_y": -13.11,
+      "snap_error": 0.0,
+      "export_x": -23.04,
+      "export_y": -13.11
+    },
+    {
+      "site_id": 12,
+      "kind": "skeleton_wire",
+      "role": "WIRE6",
+      "pin_index": "",
+      "x": 0.768,
+      "y": 0.225,
+      "z": 0.0,
+      "n": 2,
+      "m": 0,
+      "l": 1,
+      "siqad_x": 7.68,
+      "siqad_y": 2.25,
+      "snap_error": 0.0,
+      "export_x": 7.68,
+      "export_y": 2.25
+    },
+    {
+      "site_id": 13,
+      "kind": "skeleton_wire",
+      "role": "WIRE7",
+      "pin_index": "",
+      "x": 3.84,
+      "y": 0.225,
+      "z": 0.0,
+      "n": 10,
+      "m": 0,
+      "l": 1,
+      "siqad_x": 38.4,
+      "siqad_y": 2.25,
+      "snap_error": 0.0,
+      "export_x": 38.4,
+      "export_y": 2.25
+    },
+    {
+      "site_id": 14,
+      "kind": "skeleton_wire",
+      "role": "WIRE8",
+      "pin_index": "",
+      "x": 6.912,
+      "y": 0.225,
+      "z": 0.0,
+      "n": 18,
+      "m": 0,
+      "l": 1,
+      "siqad_x": 69.12,
+      "siqad_y": 2.25,
+      "snap_error": 0.0,
+      "export_x": 69.12,
+      "export_y": 2.25
+    },
+    {
+      "site_id": 15,
+      "kind": "canvas",
+      "role": "CANVAS0",
+      "pin_index": "",
+      "x": 8.448,
+      "y": 0.225,
+      "z": 0.0,
+      "n": 22,
+      "m": 0,
+      "l": 1,
+      "siqad_x": 84.47999999999999,
+      "siqad_y": 2.25,
+      "snap_error": 0.0,
+      "export_x": 84.47999999999999,
+      "export_y": 2.25
+    },
+    {
+      "site_id": 16,
+      "kind": "canvas",
+      "role": "CANVAS1",
+      "pin_index": "",
+      "x": 11.52,
+      "y": 4.833,
+      "z": 0.0,
+      "n": 30,
+      "m": 6,
+      "l": 1,
+      "siqad_x": 115.19999999999999,
+      "siqad_y": 48.33,
+      "snap_error": 0.0,
+      "export_x": 115.19999999999999,
+      "export_y": 48.33
+    },
+    {
+      "site_id": 17,
+      "kind": "canvas",
+      "role": "CANVAS2",
+      "pin_index": "",
+      "x": 13.056000000000001,
+      "y": 4.833,
+      "z": 0.0,
+      "n": 34,
+      "m": 6,
+      "l": 1,
+      "siqad_x": 130.56,
+      "siqad_y": 48.33,
+      "snap_error": 0.0,
+      "export_x": 130.56,
+      "export_y": 48.33
+    }
+  ]
+}

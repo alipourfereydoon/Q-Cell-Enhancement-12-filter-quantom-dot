@@ -1,0 +1,16 @@
+gate,candidate_id,energy_margin,canvas_indices,candidate_sqd
+HA,1,-0.014453578861961969,105 131 177,validation_exports_2input\HA\candidates\candidate_000001\candidate.sqd
+HA,2,-0.0015191599755675078,141 147 163,validation_exports_2input\HA\candidates\candidate_000002\candidate.sqd
+HA,3,-0.01383368096820714,123 166 179,validation_exports_2input\HA\candidates\candidate_000003\candidate.sqd
+HA,4,-0.009744413331751023,107 108 148,validation_exports_2input\HA\candidates\candidate_000004\candidate.sqd
+HA,5,-0.023343437911396592,107 110 115,validation_exports_2input\HA\candidates\candidate_000005\candidate.sqd
+HA,6,-0.026108684004729543,107 149 180,validation_exports_2input\HA\candidates\candidate_000006\candidate.sqd
+HA,7,-0.02461325266931258,3 123 131,validation_exports_2input\HA\candidates\candidate_000007\candidate.sqd
+HA,8,-0.017092442747172587,88 106 148,validation_exports_2input\HA\candidates\candidate_000008\candidate.sqd
+HA,9,-0.016280576193849594,127 141 148,validation_exports_2input\HA\candidates\candidate_000009\candidate.sqd
+HA,10,-0.029736724547721582,51 115 124,validation_exports_2input\HA\candidates\candidate_000010\candidate.sqd
+HA,11,-0.00311416323405167,105 143 148,validation_exports_2input\HA\candidates\candidate_000011\candidate.sqd
+HA,12,-0.029597654746017277,24 113 122,validation_exports_2input\HA\candidates\candidate_000012\candidate.sqd
+HA,13,-0.008896713015945412,123 132 144,validation_exports_2input\HA\candidates\candidate_000013\candidate.sqd
+HA,14,-0.028201847716104567,121 126 165,validation_exports_2input\HA\candidates\candidate_000014\candidate.sqd
+HA,15,-0.016352260448748268,45 106 115,validation_exports_2input\HA\candidates\candidate_000015\candidate.sqd

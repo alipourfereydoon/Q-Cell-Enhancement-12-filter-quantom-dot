@@ -1,0 +1,33 @@
+Phase1_Prune
+Input:
+    Layout L
+    Skeleton S
+    Canvas C
+    Number of canvas SiDBs d
+    Physical parameters P = {mu_minus, mu_plus, lambda_tf, epsilon_r}
+
+Output:
+    TRUE  iff layout L must be discarded in Phase 1
+    FALSE otherwise
+
+1   // F1: Minimum Inter-SiDB Distance Pruning
+2   if F1_MinDistancePruning(L, d, P) = TRUE then
+3       return TRUE
+4   end if
+
+5   // F2: Symmetry-Based Pruning
+6   if F2_SymmetryPruning(L, S, C) = TRUE then
+7       return TRUE
+8   end if
+
+9   // F3: Wire Interference Pruning
+10  if F3_WireInterferencePruning(L, S, P) = TRUE then
+11      return TRUE
+12  end if
+
+13  // F4: Positive Charge Pruning
+14  if F4_PositiveChargePruning(L, P) = TRUE then
+15      return TRUE
+16  end if
+
+17  return FALSE

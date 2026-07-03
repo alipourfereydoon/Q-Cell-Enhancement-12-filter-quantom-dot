@@ -1,0 +1,566 @@
+{
+  "gate": "ITE",
+  "candidate_id": 2,
+  "canvas_indices": [
+    16,
+    67,
+    103,
+    129
+  ],
+  "input_pins": [
+    {
+      "pin_index": 0,
+      "pos_a": [
+        -5.76,
+        7.137,
+        0.0
+      ],
+      "pos_b": [
+        -5.76,
+        7.904999999999999,
+        0.0
+      ],
+      "encoding": {
+        "0": {
+          "pos_a": -1,
+          "pos_b": 0
+        },
+        "1": {
+          "pos_a": 0,
+          "pos_b": -1
+        }
+      }
+    },
+    {
+      "pin_index": 1,
+      "pos_a": [
+        -5.76,
+        0.225,
+        0.0
+      ],
+      "pos_b": [
+        -5.76,
+        0.993,
+        0.0
+      ],
+      "encoding": {
+        "0": {
+          "pos_a": -1,
+          "pos_b": 0
+        },
+        "1": {
+          "pos_a": 0,
+          "pos_b": -1
+        }
+      }
+    },
+    {
+      "pin_index": 2,
+      "pos_a": [
+        -5.76,
+        -7.455,
+        0.0
+      ],
+      "pos_b": [
+        -5.76,
+        -6.687,
+        0.0
+      ],
+      "encoding": {
+        "0": {
+          "pos_a": -1,
+          "pos_b": 0
+        },
+        "1": {
+          "pos_a": 0,
+          "pos_b": -1
+        }
+      }
+    }
+  ],
+  "output_pins": [
+    {
+      "pin_index": 0,
+      "pos_a": [
+        3.84,
+        0.225,
+        0.0
+      ],
+      "pos_b": [
+        3.84,
+        0.993,
+        0.0
+      ],
+      "encoding": {
+        "0": {
+          "pos_a": -1,
+          "pos_b": 0
+        },
+        "1": {
+          "pos_a": 0,
+          "pos_b": -1
+        }
+      }
+    }
+  ],
+  "wire_sidbs": [
+    [
+      -3.84,
+      7.137,
+      0.0
+    ],
+    [
+      -1.92,
+      4.833,
+      0.0
+    ],
+    [
+      0.0,
+      2.5290000000000004,
+      0.0
+    ],
+    [
+      -3.84,
+      0.225,
+      0.0
+    ],
+    [
+      -1.92,
+      0.225,
+      0.0
+    ],
+    [
+      0.0,
+      0.225,
+      0.0
+    ],
+    [
+      -3.84,
+      -6.687,
+      0.0
+    ],
+    [
+      -1.92,
+      -4.383000000000001,
+      0.0
+    ],
+    [
+      0.0,
+      -2.079,
+      0.0
+    ],
+    [
+      1.92,
+      0.225,
+      0.0
+    ]
+  ],
+  "canvas_sidbs": [
+    [
+      -4.224,
+      -2.847,
+      0.0
+    ],
+    [
+      1.1520000000000001,
+      -4.383000000000001,
+      0.0
+    ],
+    [
+      3.072,
+      9.441,
+      0.0
+    ],
+    [
+      5.376,
+      9.441,
+      0.0
+    ]
+  ],
+  "expected_truth_table": {
+    "000": "0",
+    "001": "0",
+    "010": "0",
+    "011": "1",
+    "100": "1",
+    "101": "0",
+    "110": "1",
+    "111": "1"
+  },
+  "siqad_export_rows": [
+    {
+      "site_id": 0,
+      "kind": "skeleton_input",
+      "role": "IN0_A",
+      "pin_index": 0,
+      "x": -5.76,
+      "y": 7.137,
+      "z": 0.0,
+      "n": -15,
+      "m": 9,
+      "l": 1,
+      "siqad_x": -57.599999999999994,
+      "siqad_y": 71.37,
+      "snap_error": 0.0,
+      "export_x": -57.599999999999994,
+      "export_y": 71.37
+    },
+    {
+      "site_id": 1,
+      "kind": "skeleton_input",
+      "role": "IN0_B",
+      "pin_index": 0,
+      "x": -5.76,
+      "y": 7.904999999999999,
+      "z": 0.0,
+      "n": -15,
+      "m": 10,
+      "l": 1,
+      "siqad_x": -57.599999999999994,
+      "siqad_y": 79.05,
+      "snap_error": 0.0,
+      "export_x": -57.599999999999994,
+      "export_y": 79.05
+    },
+    {
+      "site_id": 2,
+      "kind": "skeleton_input",
+      "role": "IN1_A",
+      "pin_index": 1,
+      "x": -5.76,
+      "y": 0.225,
+      "z": 0.0,
+      "n": -15,
+      "m": 0,
+      "l": 1,
+      "siqad_x": -57.599999999999994,
+      "siqad_y": 2.25,
+      "snap_error": 0.0,
+      "export_x": -57.599999999999994,
+      "export_y": 2.25
+    },
+    {
+      "site_id": 3,
+      "kind": "skeleton_input",
+      "role": "IN1_B",
+      "pin_index": 1,
+      "x": -5.76,
+      "y": 0.993,
+      "z": 0.0,
+      "n": -15,
+      "m": 1,
+      "l": 1,
+      "siqad_x": -57.599999999999994,
+      "siqad_y": 9.93,
+      "snap_error": 0.0,
+      "export_x": -57.599999999999994,
+      "export_y": 9.93
+    },
+    {
+      "site_id": 4,
+      "kind": "skeleton_input",
+      "role": "IN2_A",
+      "pin_index": 2,
+      "x": -5.76,
+      "y": -7.455,
+      "z": 0.0,
+      "n": -15,
+      "m": -10,
+      "l": 1,
+      "siqad_x": -57.599999999999994,
+      "siqad_y": -74.55,
+      "snap_error": 0.0,
+      "export_x": -57.599999999999994,
+      "export_y": -74.55
+    },
+    {
+      "site_id": 5,
+      "kind": "skeleton_input",
+      "role": "IN2_B",
+      "pin_index": 2,
+      "x": -5.76,
+      "y": -6.687,
+      "z": 0.0,
+      "n": -15,
+      "m": -9,
+      "l": 1,
+      "siqad_x": -57.599999999999994,
+      "siqad_y": -66.87,
+      "snap_error": 0.0,
+      "export_x": -57.599999999999994,
+      "export_y": -66.87
+    },
+    {
+      "site_id": 6,
+      "kind": "skeleton_output",
+      "role": "OUT0_A",
+      "pin_index": 0,
+      "x": 3.84,
+      "y": 0.225,
+      "z": 0.0,
+      "n": 10,
+      "m": 0,
+      "l": 1,
+      "siqad_x": 38.4,
+      "siqad_y": 2.25,
+      "snap_error": 0.0,
+      "export_x": 38.4,
+      "export_y": 2.25
+    },
+    {
+      "site_id": 7,
+      "kind": "skeleton_output",
+      "role": "OUT0_B",
+      "pin_index": 0,
+      "x": 3.84,
+      "y": 0.993,
+      "z": 0.0,
+      "n": 10,
+      "m": 1,
+      "l": 1,
+      "siqad_x": 38.4,
+      "siqad_y": 9.93,
+      "snap_error": 0.0,
+      "export_x": 38.4,
+      "export_y": 9.93
+    },
+    {
+      "site_id": 8,
+      "kind": "skeleton_wire",
+      "role": "WIRE0",
+      "pin_index": "",
+      "x": -3.84,
+      "y": 7.137,
+      "z": 0.0,
+      "n": -10,
+      "m": 9,
+      "l": 1,
+      "siqad_x": -38.4,
+      "siqad_y": 71.37,
+      "snap_error": 0.0,
+      "export_x": -38.4,
+      "export_y": 71.37
+    },
+    {
+      "site_id": 9,
+      "kind": "skeleton_wire",
+      "role": "WIRE1",
+      "pin_index": "",
+      "x": -1.92,
+      "y": 4.833,
+      "z": 0.0,
+      "n": -5,
+      "m": 6,
+      "l": 1,
+      "siqad_x": -19.2,
+      "siqad_y": 48.33,
+      "snap_error": 0.0,
+      "export_x": -19.2,
+      "export_y": 48.33
+    },
+    {
+      "site_id": 10,
+      "kind": "skeleton_wire",
+      "role": "WIRE2",
+      "pin_index": "",
+      "x": 0.0,
+      "y": 2.5290000000000004,
+      "z": 0.0,
+      "n": 0,
+      "m": 3,
+      "l": 1,
+      "siqad_x": 0.0,
+      "siqad_y": 25.29,
+      "snap_error": 0.0,
+      "export_x": 0.0,
+      "export_y": 25.29
+    },
+    {
+      "site_id": 11,
+      "kind": "skeleton_wire",
+      "role": "WIRE3",
+      "pin_index": "",
+      "x": -3.84,
+      "y": 0.225,
+      "z": 0.0,
+      "n": -10,
+      "m": 0,
+      "l": 1,
+      "siqad_x": -38.4,
+      "siqad_y": 2.25,
+      "snap_error": 0.0,
+      "export_x": -38.4,
+      "export_y": 2.25
+    },
+    {
+      "site_id": 12,
+      "kind": "skeleton_wire",
+      "role": "WIRE4",
+      "pin_index": "",
+      "x": -1.92,
+      "y": 0.225,
+      "z": 0.0,
+      "n": -5,
+      "m": 0,
+      "l": 1,
+      "siqad_x": -19.2,
+      "siqad_y": 2.25,
+      "snap_error": 0.0,
+      "export_x": -19.2,
+      "export_y": 2.25
+    },
+    {
+      "site_id": 13,
+      "kind": "skeleton_wire",
+      "role": "WIRE5",
+      "pin_index": "",
+      "x": 0.0,
+      "y": 0.225,
+      "z": 0.0,
+      "n": 0,
+      "m": 0,
+      "l": 1,
+      "siqad_x": 0.0,
+      "siqad_y": 2.25,
+      "snap_error": 0.0,
+      "export_x": 0.0,
+      "export_y": 2.25
+    },
+    {
+      "site_id": 14,
+      "kind": "skeleton_wire",
+      "role": "WIRE6",
+      "pin_index": "",
+      "x": -3.84,
+      "y": -6.687,
+      "z": 0.0,
+      "n": -10,
+      "m": -9,
+      "l": 1,
+      "siqad_x": -38.4,
+      "siqad_y": -66.87,
+      "snap_error": 0.0,
+      "export_x": -38.4,
+      "export_y": -66.87
+    },
+    {
+      "site_id": 15,
+      "kind": "skeleton_wire",
+      "role": "WIRE7",
+      "pin_index": "",
+      "x": -1.92,
+      "y": -4.383000000000001,
+      "z": 0.0,
+      "n": -5,
+      "m": -6,
+      "l": 1,
+      "siqad_x": -19.2,
+      "siqad_y": -43.83,
+      "snap_error": 0.0,
+      "export_x": -19.2,
+      "export_y": -43.83
+    },
+    {
+      "site_id": 16,
+      "kind": "skeleton_wire",
+      "role": "WIRE8",
+      "pin_index": "",
+      "x": 0.0,
+      "y": -2.079,
+      "z": 0.0,
+      "n": 0,
+      "m": -3,
+      "l": 1,
+      "siqad_x": 0.0,
+      "siqad_y": -20.79,
+      "snap_error": 0.0,
+      "export_x": 0.0,
+      "export_y": -20.79
+    },
+    {
+      "site_id": 17,
+      "kind": "skeleton_wire",
+      "role": "WIRE9",
+      "pin_index": "",
+      "x": 1.92,
+      "y": 0.225,
+      "z": 0.0,
+      "n": 5,
+      "m": 0,
+      "l": 1,
+      "siqad_x": 19.2,
+      "siqad_y": 2.25,
+      "snap_error": 0.0,
+      "export_x": 19.2,
+      "export_y": 2.25
+    },
+    {
+      "site_id": 18,
+      "kind": "canvas",
+      "role": "CANVAS0",
+      "pin_index": "",
+      "x": -4.224,
+      "y": -2.847,
+      "z": 0.0,
+      "n": -11,
+      "m": -4,
+      "l": 1,
+      "siqad_x": -42.239999999999995,
+      "siqad_y": -28.47,
+      "snap_error": 0.0,
+      "export_x": -42.239999999999995,
+      "export_y": -28.47
+    },
+    {
+      "site_id": 19,
+      "kind": "canvas",
+      "role": "CANVAS1",
+      "pin_index": "",
+      "x": 1.1520000000000001,
+      "y": -4.383000000000001,
+      "z": 0.0,
+      "n": 3,
+      "m": -6,
+      "l": 1,
+      "siqad_x": 11.52,
+      "siqad_y": -43.83,
+      "snap_error": 0.0,
+      "export_x": 11.52,
+      "export_y": -43.83
+    },
+    {
+      "site_id": 20,
+      "kind": "canvas",
+      "role": "CANVAS2",
+      "pin_index": "",
+      "x": 3.072,
+      "y": 9.441,
+      "z": 0.0,
+      "n": 8,
+      "m": 12,
+      "l": 1,
+      "siqad_x": 30.72,
+      "siqad_y": 94.41,
+      "snap_error": 0.0,
+      "export_x": 30.72,
+      "export_y": 94.41
+    },
+    {
+      "site_id": 21,
+      "kind": "canvas",
+      "role": "CANVAS3",
+      "pin_index": "",
+      "x": 5.376,
+      "y": 9.441,
+      "z": 0.0,
+      "n": 14,
+      "m": 12,
+      "l": 1,
+      "siqad_x": 53.76,
+      "siqad_y": 94.41,
+      "snap_error": 0.0,
+      "export_x": 53.76,
+      "export_y": 94.41
+    }
+  ]
+}

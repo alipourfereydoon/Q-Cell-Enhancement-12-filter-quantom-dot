@@ -1,0 +1,44 @@
+F12_IOSignalInstabilityPruning
+Input:
+    Layout L
+    Boolean function f
+    Skeleton S
+    Number of canvas SiDBs d
+    Physical parameters P
+
+Output:
+    TRUE  iff an incorrect I/O state has lower energy than the correct one
+    FALSE otherwise
+
+1   for each input pattern x in B^n do
+
+2       // Correct I/O assignment
+3       n_S_corr <- SkeletonChargeDistributionFor(x, f(x))
+4       E_valid_min <- +infinity
+
+5       for each canvas charge distribution n_A in {-1, 0}^d do
+6           n_L <- n_S_corr U n_A
+7           if PhysValid(L, n_L, P) = TRUE then
+8               E <- ElectrostaticEnergy(L, n_L, P)
+9               if E < E_valid_min then
+10                  E_valid_min <- E
+11              end if
+12          end if
+13      end for
+
+14      // Competing incorrect I/O assignments
+15      for each inverted skeleton assignment n_S_inv in InvertedIOSignalAssignments(x, f(x)) do
+16          for each canvas charge distribution n_A in {-1, 0}^d do
+17              n_L <- n_S_inv U n_A
+18              if PhysValid(L, n_L, P) = TRUE then
+19                  E_inv <- ElectrostaticEnergy(L, n_L, P)
+20                  if E_inv < E_valid_min then
+21                      return TRUE
+22                  end if
+23              end if
+24          end for
+25      end for
+
+26  end for
+
+27  return FALSE

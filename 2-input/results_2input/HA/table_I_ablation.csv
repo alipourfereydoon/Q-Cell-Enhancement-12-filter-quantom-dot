@@ -1,0 +1,2 @@
+Benchmark,|Ld|,Processed,After F1,After F2,After F3,After F4,After F5,After F6,After F7,After F8,After F9,After F10,After F11,After F12,Selected,Candidates,Time [s]
+HA,1072445,100000,94606,94606,90086,90086,70860,60908,60908,8151,921,227,227,0,,0,16125.6976

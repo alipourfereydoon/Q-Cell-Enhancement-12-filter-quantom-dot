@@ -1,0 +1,68 @@
+python run_gate_report_2input.py \
+  --gate ALL \
+  --samples 200000 \
+  --workers 8 \
+  --chunksize 3000 \
+  --seed 42 \
+  --sim-time 0.01 \
+  --canvas-d 3 \
+  --strict-profile balanced \
+  --io-margin 0.0001 \
+  --pressure-margin 0.0 \
+  --connectivity-radius 12.5 \
+  --d-min 2.5 \
+  --positive-charge-margin 0.01 \
+  --charge-min-fraction 0.0 \
+  --charge-max-fraction 1.0 \
+  --charge-count-conflict-radius 3.0 \
+  --input-disturbance 0.4 \
+  --energy-margin 0.05 \
+  --f11-mode counted \
+  --f11-min-support-states 1 \
+  --selection-target 50 \
+  --selection-min-margin 0.001
+
+
+
+
+
+
+# ابتدا فایل‌های .sqd اسکلتون را تولید کنید
+python generate_skeleton_sqd.py
+
+# سپس گیت‌ها را اجرا کنید
+python export_siqad_validation_2input.py \
+  --gate ALL \
+  --samples 1000000 \
+  --workers 4 \
+  --chunksize 5000 \
+  --max-candidates 20 \
+  --canvas-d 3 \
+  --strict-profile safe \
+  --io-margin 0.05 \
+  --d-min 0.384 \
+  --input-disturbance 1.0 \
+  --connectivity-radius 25.0 \
+  --energy-margin 1.0 \
+  --f11-mode counted \
+  --selection-target 20 \
+  --selection-min-margin 0.0
+
+
+تصحیح شده
+
+python export_siqad_validation_2input.py ^
+  --gate ALL ^
+  --samples 100000 ^
+  --workers 4 ^
+  --chunksize 5000 ^
+  --max-candidates 20 ^
+  --canvas-d 3 ^
+  --strict-profile safe ^
+  --io-margin 0.05 ^
+  --f11-mode counted
+
+
+
+
+----------------------------------------------------------------------------

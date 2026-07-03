@@ -1,0 +1,21 @@
+
+python run_gate_report.py --gate AND3 --samples 100000 --workers 4 --chunksize 2000 --strict-profile balanced --io-margin 0.00007 --connectivity-radius 9.0 --d-min 3.5 --positive-charge-margin 0.02 --charge-min-fraction 0.25 --charge-max-fraction 1.0 --charge-count-conflict-radius 6.5 --input-disturbance 0.0003 --pressure-margin 0.001 --energy-margin 0.005 --f11-mode strict-hop --f11-min-support-states 1
+
+
+
+
+
+
+
+python export_siqad_validation.py --gate ALL --samples 100000 --workers 4 --chunksize 2000 --max-candidates 20 --strict-profile balanced --io-margin 0.0001 --connectivity-radius 9.0 --d-min 3.1 --positive-charge-margin 0.02 --charge-min-fraction 0.25 --charge-max-fraction 1.0 --charge-count-conflict-radius 4.3 --input-disturbance 0.001 --pressure-margin 0.001 --energy-margin 0.01 --f11-mode strict-hop --f11-min-support-states 1 --output-dir validation_exports
+
+
+
+##########################################3
+python export_siqad_validation.py --gate ALL --samples 1000 --workers 4 --chunksize 2000 --max-candidates 20 --strict-profile balanced --d-min 1.0  --input-disturbance 0.3  
+--connectivity-radius 4  --energy-margin 0.5  --io-margin 0.005 --f11-mode counted --output-dir validation_exports  
+
+                        ================================================================================      
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+ python run_gate_report.py  --gate ALL  --samples 1000  --workers 4  --chunksize 2000  --strict-profile balanced  --d-min 1.0  --positive-charge-margin 0.0  --charge-min-fraction 0.0  --charge-max-fraction 1.0  --input-disturbance 0.3  --connectivity-radius 4  --pressure-margin 0.0  --energy-margin 0.5  --io-margin 0.005  --f11-mode strict-hop  --f11-min-support-states 1                              

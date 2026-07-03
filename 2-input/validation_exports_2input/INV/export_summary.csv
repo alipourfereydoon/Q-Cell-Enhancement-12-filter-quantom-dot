@@ -1,0 +1,21 @@
+gate,candidate_id,energy_margin,canvas_indices,candidate_sqd
+INV,1,-0.017005268518395678,49 69 144,validation_exports_2input\INV\candidates\candidate_000001\candidate.sqd
+INV,2,-0.02987450657237911,44 143 160,validation_exports_2input\INV\candidates\candidate_000002\candidate.sqd
+INV,3,-0.016773648834437438,105 129 149,validation_exports_2input\INV\candidates\candidate_000003\candidate.sqd
+INV,4,-0.004723507035938379,6 130 176,validation_exports_2input\INV\candidates\candidate_000004\candidate.sqd
+INV,5,-0.01695569704187161,83 125 160,validation_exports_2input\INV\candidates\candidate_000005\candidate.sqd
+INV,6,-0.0003922525824933132,169 178 196,validation_exports_2input\INV\candidates\candidate_000006\candidate.sqd
+INV,7,-0.02270343200513003,0 126 168,validation_exports_2input\INV\candidates\candidate_000007\candidate.sqd
+INV,8,-0.01469851175540371,67 129 192,validation_exports_2input\INV\candidates\candidate_000008\candidate.sqd
+INV,9,-0.003835554919914941,146 159 160,validation_exports_2input\INV\candidates\candidate_000009\candidate.sqd
+INV,10,-0.02939481217258999,32 74 145,validation_exports_2input\INV\candidates\candidate_000010\candidate.sqd
+INV,11,-0.0043885475541241,130 137 177,validation_exports_2input\INV\candidates\candidate_000011\candidate.sqd
+INV,12,-0.013535272139856058,27 146 161,validation_exports_2input\INV\candidates\candidate_000012\candidate.sqd
+INV,13,-0.02954921754316775,52 66 145,validation_exports_2input\INV\candidates\candidate_000013\candidate.sqd
+INV,14,-0.015709535712485234,104 129 168,validation_exports_2input\INV\candidates\candidate_000014\candidate.sqd
+INV,15,-0.01635932596760603,32 97 144,validation_exports_2input\INV\candidates\candidate_000015\candidate.sqd
+INV,16,-0.024281442492680938,14 145 159,validation_exports_2input\INV\candidates\candidate_000016\candidate.sqd
+INV,17,-0.01644965753993377,24 117 127,validation_exports_2input\INV\candidates\candidate_000017\candidate.sqd
+INV,18,-0.0020814663534591826,53 141 147,validation_exports_2input\INV\candidates\candidate_000018\candidate.sqd
+INV,19,-0.001168937240946022,54 141 163,validation_exports_2input\INV\candidates\candidate_000019\candidate.sqd
+INV,20,-0.029498404605326822,54 60 145,validation_exports_2input\INV\candidates\candidate_000020\candidate.sqd

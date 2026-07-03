@@ -1,0 +1,2 @@
+Benchmark,|Ld|,Processed,After F1,After F2,After F3,After F4,After F5,After F6,After F7,After F8,After F9,After F10,After F11,After F12,Selected,Candidates,Time [s]
+INV,1774630,100000,95189,95189,88738,88738,88589,78524,78524,14841,4649,2328,2328,17,,17,281.5618

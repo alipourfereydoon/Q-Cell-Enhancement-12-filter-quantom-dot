@@ -1,0 +1,19 @@
+Algorithm 17: ExactPhysicalVerification
+Input:
+    Layout L
+    Boolean function f
+    Physical parameters P
+
+Output:
+    TRUE  iff L is a valid exact implementation of f
+    FALSE otherwise
+
+1   for each input pattern x in B^n do
+2       Simulate layout L exactly under input x using full SiDB physics
+3       y_sim <- ExtractOutputBitsFromSimulation(L)
+4       if y_sim != f(x) then
+5           return FALSE
+6       end if
+7   end for
+
+8   return TRUE

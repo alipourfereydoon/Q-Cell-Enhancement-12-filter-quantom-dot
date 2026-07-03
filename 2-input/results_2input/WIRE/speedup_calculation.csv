@@ -1,0 +1,11 @@
+Quantity,Value
+Processed layouts,100000
+Full search space |Ld|,1774630
+Input patterns (2),2
+Assumed sim time per layout/input [s],0.01
+Estimated brute-force (sample) [s],2000.0
+Estimated brute-force (full) [s],35492.6
+QC-3 candidates,3088
+QuickCell-12 candidates,16
+Candidate reduction over QC-3,193.0000x
+Wall time [s],242.313

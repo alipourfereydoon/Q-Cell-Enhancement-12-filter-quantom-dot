@@ -1,0 +1,21 @@
+F10_EnergyLowerBoundPruning
+Input:
+    Layout L
+    Boolean function f
+    Skeleton S
+    Physical parameters P
+
+Output:
+    TRUE  iff an incorrect state is analytically guaranteed to have lower energy
+    FALSE otherwise
+
+1   for each input pattern x in B^n do
+2       E_corr_LB <- LowerBoundEnergyCorrectState(L, x, f(x), P)
+3       E_inv_UB  <- UpperBoundEnergyBestIncorrectState(L, x, f(x), P)
+
+4       if E_corr_LB > E_inv_UB then
+5           return TRUE
+6       end if
+7   end for
+
+8   return FALSE

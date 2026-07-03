@@ -1,0 +1,22 @@
+{
+  "gate": "DOUBLE_WIRE",
+  "category": "2in_2out",
+  "samples_processed": 1000,
+  "raw_post_f12": 13,
+  "exported": 13,
+  "elapsed": 11.27614450454712,
+  "after_counts": {
+    "F1": 1000,
+    "F2": 1000,
+    "F3": 953,
+    "F4": 953,
+    "F5": 953,
+    "F6": 953,
+    "F7": 953,
+    "F8": 119,
+    "F9": 13,
+    "F10": 13,
+    "F11": 13,
+    "F12": 13
+  }
+}

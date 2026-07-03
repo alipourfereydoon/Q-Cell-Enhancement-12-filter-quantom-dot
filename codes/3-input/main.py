@@ -1,0 +1,15 @@
+# main.py
+
+print("QuickCell-12 utilities")
+print()
+print("Generate tables only:")
+print("python run_gate_report.py --gate AND3 --samples 100000 --workers 4 --chunksize 2000 --strict-profile balanced --io-margin 0.0001")
+print()
+print("Generate tables + SiQAD validation files:")
+print("python export_siqad_validation.py --gate AND3 --samples 100000 --workers 4 --chunksize 2000 --strict-profile balanced --io-margin 0.0001 --max-candidates 50")
+print()
+print("Generate for all gates:")
+print("python export_siqad_validation.py --gate ALL --samples 100000 --workers 4 --chunksize 2000 --strict-profile balanced --io-margin 0.0001 --max-candidates 50")
+print()
+print("Analyze filled SiQAD validation sheets:")
+print("python analyze_siqad_results.py --root validation_exports --all")

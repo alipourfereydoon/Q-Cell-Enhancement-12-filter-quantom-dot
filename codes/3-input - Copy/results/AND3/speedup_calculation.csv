@@ -1,0 +1,11 @@
+Quantity,Value
+Processed layouts,500
+Full search space |Ld|,16701685
+Input patterns for 3-input gate,8
+Assumed simulation time per layout/input [s],0.01
+Estimated brute-force time for processed sample [s],40.0
+Estimated brute-force time for full |Ld| [s],1336134.8
+QC-3 candidates before verification,14
+QuickCell-12 candidates before verification,1
+QuickCell-12 candidate reduction over QC-3,14.0000x
+Measured QuickCell-12 wall time [s],29.4293

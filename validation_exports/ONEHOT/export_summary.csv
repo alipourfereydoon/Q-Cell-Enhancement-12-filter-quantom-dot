@@ -1,3 +1,0 @@
-gate,candidate_id,energy_margin,canvas_indices,candidate_json,candidate_csv,candidate_sqd
-ONEHOT,1,-5.1901134971998886e-06,37 62 96 104,validation_exports\ONEHOT\candidates\candidate_000001\candidate.json,validation_exports\ONEHOT\candidates\candidate_000001\all_sidbs.csv,validation_exports\ONEHOT\candidates\candidate_000001\candidate.sqd
-ONEHOT,2,-2.655150214669888e-05,25 62 68 104,validation_exports\ONEHOT\candidates\candidate_000002\candidate.json,validation_exports\ONEHOT\candidates\candidate_000002\all_sidbs.csv,validation_exports\ONEHOT\candidates\candidate_000002\candidate.sqd

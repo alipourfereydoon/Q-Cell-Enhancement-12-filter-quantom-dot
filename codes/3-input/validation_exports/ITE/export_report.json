@@ -1,0 +1,39 @@
+{
+  "gate": "ITE",
+  "samples_requested": 1000,
+  "samples_processed": 1000,
+  "raw_post_f12_candidates": 92,
+  "exported_candidates": 20,
+  "elapsed_seconds": 156.3661332130432,
+  "after_counts": {
+    "F1": 944,
+    "F2": 944,
+    "F3": 546,
+    "F4": 381,
+    "F5": 381,
+    "F6": 373,
+    "F7": 373,
+    "F8": 367,
+    "F9": 314,
+    "F10": 314,
+    "F11": 314,
+    "F12": 92
+  },
+  "validation_sheet": "validation_exports\\ITE\\validation_sheet.csv",
+  "profile": "balanced",
+  "parameters": {
+    "d_min": 1.0,
+    "wire_forbidden_radius": 0.4,
+    "positive_charge_margin": 0.0,
+    "charge_min_fraction": 0.0,
+    "charge_max_fraction": 1.0,
+    "charge_count_conflict_radius": null,
+    "input_disturbance_limit": 0.3,
+    "connectivity_radius": 4.0,
+    "pressure_margin": 0.0,
+    "energy_bound_margin": 0.5,
+    "f11_mode": "counted",
+    "f11_min_support_states": 1,
+    "io_instability_margin": 0.005
+  }
+}

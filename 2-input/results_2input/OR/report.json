@@ -1,0 +1,320 @@
+{
+  "gate": "OR",
+  "full_ld": 156849,
+  "total": {
+    "processed": 100000,
+    "qc12_after": [
+      92713,
+      92713,
+      79116,
+      79116,
+      53980,
+      39126,
+      39126,
+      16579,
+      8085,
+      4109,
+      4109,
+      28
+    ],
+    "qc12_passed": [
+      [
+        57,
+        85,
+        91
+      ],
+      [
+        46,
+        74,
+        92
+      ],
+      [
+        47,
+        85,
+        92
+      ],
+      [
+        55,
+        90,
+        96
+      ],
+      [
+        48,
+        93,
+        97
+      ],
+      [
+        12,
+        63,
+        93
+      ],
+      [
+        57,
+        74,
+        91
+      ],
+      [
+        4,
+        63,
+        93
+      ],
+      [
+        16,
+        63,
+        93
+      ],
+      [
+        44,
+        79,
+        94
+      ],
+      [
+        6,
+        63,
+        93
+      ],
+      [
+        44,
+        93,
+        97
+      ],
+      [
+        42,
+        76,
+        93
+      ],
+      [
+        48,
+        79,
+        94
+      ],
+      [
+        15,
+        63,
+        93
+      ],
+      [
+        65,
+        91,
+        96
+      ],
+      [
+        5,
+        63,
+        93
+      ],
+      [
+        39,
+        59,
+        63
+      ],
+      [
+        46,
+        85,
+        92
+      ],
+      [
+        17,
+        63,
+        93
+      ],
+      [
+        25,
+        63,
+        93
+      ],
+      [
+        68,
+        74,
+        93
+      ],
+      [
+        38,
+        63,
+        93
+      ],
+      [
+        26,
+        63,
+        93
+      ],
+      [
+        68,
+        88,
+        95
+      ],
+      [
+        58,
+        86,
+        88
+      ],
+      [
+        38,
+        58,
+        62
+      ],
+      [
+        44,
+        68,
+        94
+      ]
+    ],
+    "qc3_after_f4": 100000,
+    "qc3_after_f11": 100000,
+    "qc3_after_f12": 2795,
+    "selected_candidates": 28
+  },
+  "elapsed": 686.604010105133,
+  "selection_enabled": false,
+  "table_I": [
+    {
+      "Benchmark": "OR",
+      "|Ld|": 156849,
+      "Processed": 100000,
+      "After F1": 92713,
+      "After F2": 92713,
+      "After F3": 79116,
+      "After F4": 79116,
+      "After F5": 53980,
+      "After F6": 39126,
+      "After F7": 39126,
+      "After F8": 16579,
+      "After F9": 8085,
+      "After F10": 4109,
+      "After F11": 4109,
+      "After F12": 28,
+      "Selected": "",
+      "Candidates": 28,
+      "Time [s]": 686.604
+    }
+  ],
+  "table_II": [
+    {
+      "Phase": "Phase 1",
+      "Filters": "F1-F4",
+      "Input Layouts": 100000,
+      "Output Layouts": 79116,
+      "Retention Ratio [%]": 79.116,
+      "Pruning Ratio [%]": 20.884,
+      "Reduction Factor": 1.264,
+      "Runtime [s]": ""
+    },
+    {
+      "Phase": "Phase 2",
+      "Filters": "F5-F10",
+      "Input Layouts": 79116,
+      "Output Layouts": 4109,
+      "Retention Ratio [%]": 5.1936,
+      "Pruning Ratio [%]": 94.8064,
+      "Reduction Factor": 19.2543,
+      "Runtime [s]": ""
+    },
+    {
+      "Phase": "Phase 3",
+      "Filters": "F11-F12",
+      "Input Layouts": 4109,
+      "Output Layouts": 28,
+      "Retention Ratio [%]": 0.6814,
+      "Pruning Ratio [%]": 99.3186,
+      "Reduction Factor": 146.75,
+      "Runtime [s]": ""
+    },
+    {
+      "Phase": "Total",
+      "Filters": "F1-F12",
+      "Input Layouts": 100000,
+      "Output Layouts": 28,
+      "Retention Ratio [%]": 0.028,
+      "Pruning Ratio [%]": 99.972,
+      "Reduction Factor": 3571.4286,
+      "Runtime [s]": 686.604
+    }
+  ],
+  "table_III": [
+    {
+      "Metric": "Number of pruning filters",
+      "Original QC-3": 3,
+      "QuickCell-12": 12,
+      "Improvement": "4.0x more"
+    },
+    {
+      "Metric": "Processed layouts",
+      "Original QC-3": 100000,
+      "QuickCell-12": 100000,
+      "Improvement": "same"
+    },
+    {
+      "Metric": "After early pruning / Phase 1",
+      "Original QC-3": 100000,
+      "QuickCell-12": 79116,
+      "Improvement": "1.26x fewer"
+    },
+    {
+      "Metric": "Before expensive enumerative pruning",
+      "Original QC-3": 100000,
+      "QuickCell-12": 4109,
+      "Improvement": "24.34x fewer"
+    },
+    {
+      "Metric": "Before final verification",
+      "Original QC-3": 2795,
+      "QuickCell-12": 28,
+      "Improvement": "99.82x fewer"
+    },
+    {
+      "Metric": "Candidate implementations",
+      "Original QC-3": 2795,
+      "QuickCell-12": 28,
+      "Improvement": "99.82x fewer"
+    },
+    {
+      "Metric": "Search-space reduction",
+      "Original QC-3": 35.7782,
+      "QuickCell-12": 3571.4286,
+      "Improvement": "99.82x fewer"
+    }
+  ],
+  "speedup": [
+    {
+      "Quantity": "Processed layouts",
+      "Value": 100000
+    },
+    {
+      "Quantity": "Full search space |Ld|",
+      "Value": 156849
+    },
+    {
+      "Quantity": "Input patterns (4)",
+      "Value": 4
+    },
+    {
+      "Quantity": "Assumed sim time per layout/input [s]",
+      "Value": 0.01
+    },
+    {
+      "Quantity": "Estimated brute-force (sample) [s]",
+      "Value": 4000.0
+    },
+    {
+      "Quantity": "Estimated brute-force (full) [s]",
+      "Value": 6273.96
+    },
+    {
+      "Quantity": "QC-3 candidates",
+      "Value": 2795
+    },
+    {
+      "Quantity": "QuickCell-12 candidates",
+      "Value": 28
+    },
+    {
+      "Quantity": "Candidate reduction over QC-3",
+      "Value": "99.8214x"
+    },
+    {
+      "Quantity": "Wall time [s]",
+      "Value": 686.604
+    }
+  ],
+  "selected_candidates": []
+}

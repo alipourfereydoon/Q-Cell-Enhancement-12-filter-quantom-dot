@@ -1,0 +1,27 @@
+ F9_ElectrostaticPressurePruning
+Input:
+    Layout L
+    Boolean function f
+    Skeleton S
+    Physical parameters P
+
+Output:
+    TRUE  iff output BDL pair cannot be biased in the required direction
+    FALSE otherwise
+
+1   for each input pattern x in B^n do
+2       for each output BDL pair O_beta in OutputBDLPairs(S) do
+3           DeltaV_skel <- SkeletonPressureAtOutputPair(O_beta, x, f(x))
+4           DeltaV_canvas_min <- MinimumCanvasPressure(O_beta, L, P)
+5           DeltaV_canvas_max <- MaximumCanvasPressure(O_beta, L, P)
+
+6           DeltaV_min <- DeltaV_skel + DeltaV_canvas_min
+7           DeltaV_max <- DeltaV_skel + DeltaV_canvas_max
+
+8           if RequiredOutputPressureSignIsImpossible(O_beta, x, f(x), DeltaV_min, DeltaV_max) then
+9               return TRUE
+10          end if
+11      end for
+12  end for
+
+13  return FALSE

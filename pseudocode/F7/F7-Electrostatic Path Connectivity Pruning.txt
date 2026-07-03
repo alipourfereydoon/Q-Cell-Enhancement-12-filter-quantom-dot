@@ -1,0 +1,27 @@
+ F7_ElectrostaticPathConnectivityPruning
+Input:
+    Layout L
+    Skeleton S
+    Physical parameters P
+
+Output:
+    TRUE  iff no electrostatic path exists from input region to output region
+    FALSE otherwise
+
+1   V <- all SiDB sites in L
+2   r_eff <- EffectiveElectrostaticConnectivityRadius(P)
+3   Build graph G_conn(L) = (V, E)
+4   for each pair (i, j) in V do
+5       if EuclideanDistance(i, j) <= r_eff then
+6           Add edge (i, j) to E
+7       end if
+8   end for
+
+9   V_in  <- input terminal nodes in S
+10  V_out <- output terminal nodes in S
+
+11  if Reachable(G_conn(L), V_in, V_out) = FALSE then
+12      return TRUE
+13  end if
+
+14  return FALSE

@@ -1,0 +1,2 @@
+Benchmark,|Ld|,Processed,After F1,After F2,After F3,After F4,After F5,After F6,After F7,After F8,After F9,After F10,After F11,After F12,Selected,Candidates,Time [s]
+NAND,156849,100000,92713,92713,79116,79116,53980,39126,39126,16580,8085,4111,4111,28,,28,771.3124

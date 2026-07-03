@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<siqad>
+  <program><file_purpose>save</file_purpose><version>0.3.3</version><date>2026-06-25 13:15:11</date></program>
+  <gui><zoom>0.05</zoom><displayed_region x1="-107.6" y1="-124.55" x2="88.4" y2="129.05"/><scroll x="0" y="0"/></gui>
+  <layers>
+    <layer_prop><name>Lattice</name><type>Lattice</type><role>Design</role><zoffset>0</zoffset><zheight>0</zheight><visible>1</visible><active>0</active><lat_vec><a1 x="3.84" y="0"/><a2 x="0" y="7.68"/><N>2</N><b1 x="0" y="0"/><b2 x="0" y="2.25"/></lat_vec></layer_prop>
+    <layer_prop><name>Screenshot Overlay</name><type>Misc</type><role>Overlay</role><zoffset>0</zoffset><zheight>0</zheight><visible>1</visible><active>0</active></layer_prop>
+    <layer_prop><name>Surface</name><type>DB</type><role>Design</role><zoffset>0</zoffset><zheight>0</zheight><visible>1</visible><active>0</active></layer_prop>
+    <layer_prop><name>Metal</name><type>Electrode</type><role>Design</role><zoffset>1000</zoffset><zheight>100</zheight><visible>1</visible><active>0</active></layer_prop>
+  </layers>
+  <design>
+    <layer type="Lattice"/>
+    <layer type="Misc"/>
+    <layer type="DB">
+      <!-- input IN0_A -->
+      <dbdot><layer_id>2</layer_id><latcoord n="-15" m="9" l="1"/><physloc x="-57.6" y="71.37"/><color>#ff66ccff</color></dbdot>
+      <!-- input IN0_B -->
+      <dbdot><layer_id>2</layer_id><latcoord n="-15" m="10" l="1"/><physloc x="-57.6" y="79.05"/><color>#ff66ccff</color></dbdot>
+      <!-- input IN1_A -->
+      <dbdot><layer_id>2</layer_id><latcoord n="-15" m="0" l="1"/><physloc x="-57.6" y="2.25"/><color>#ff66ccff</color></dbdot>
+      <!-- input IN1_B -->
+      <dbdot><layer_id>2</layer_id><latcoord n="-15" m="1" l="1"/><physloc x="-57.6" y="9.93"/><color>#ff66ccff</color></dbdot>
+      <!-- input IN2_A -->
+      <dbdot><layer_id>2</layer_id><latcoord n="-15" m="-10" l="1"/><physloc x="-57.6" y="-74.55"/><color>#ff66ccff</color></dbdot>
+      <!-- input IN2_B -->
+      <dbdot><layer_id>2</layer_id><latcoord n="-15" m="-9" l="1"/><physloc x="-57.6" y="-66.87"/><color>#ff66ccff</color></dbdot>
+      <!-- wire W_UP0 -->
+      <dbdot><layer_id>2</layer_id><latcoord n="-10" m="9" l="1"/><physloc x="-38.4" y="71.37"/><color>#ffc8c8c8</color></dbdot>
+      <!-- wire W_UP1 -->
+      <dbdot><layer_id>2</layer_id><latcoord n="-5" m="6" l="1"/><physloc x="-19.2" y="48.33"/><color>#ffc8c8c8</color></dbdot>
+      <!-- wire W_UP2 -->
+      <dbdot><layer_id>2</layer_id><latcoord n="0" m="3" l="1"/><physloc x="0" y="25.29"/><color>#ffc8c8c8</color></dbdot>
+      <!-- wire W_MID0 -->
+      <dbdot><layer_id>2</layer_id><latcoord n="-10" m="0" l="1"/><physloc x="-38.4" y="2.25"/><color>#ffc8c8c8</color></dbdot>
+      <!-- wire W_MID1 -->
+      <dbdot><layer_id>2</layer_id><latcoord n="-5" m="0" l="1"/><physloc x="-19.2" y="2.25"/><color>#ffc8c8c8</color></dbdot>
+      <!-- wire W_MID2 -->
+      <dbdot><layer_id>2</layer_id><latcoord n="0" m="0" l="1"/><physloc x="0" y="2.25"/><color>#ffc8c8c8</color></dbdot>
+      <!-- wire W_LO0 -->
+      <dbdot><layer_id>2</layer_id><latcoord n="-10" m="-9" l="1"/><physloc x="-38.4" y="-66.87"/><color>#ffc8c8c8</color></dbdot>
+      <!-- wire W_LO1 -->
+      <dbdot><layer_id>2</layer_id><latcoord n="-5" m="-6" l="1"/><physloc x="-19.2" y="-43.83"/><color>#ffc8c8c8</color></dbdot>
+      <!-- wire W_LO2 -->
+      <dbdot><layer_id>2</layer_id><latcoord n="0" m="-3" l="1"/><physloc x="0" y="-20.79"/><color>#ffc8c8c8</color></dbdot>
+      <!-- wire W_OUT -->
+      <dbdot><layer_id>2</layer_id><latcoord n="5" m="0" l="1"/><physloc x="19.2" y="2.25"/><color>#ffc8c8c8</color></dbdot>
+      <!-- output OUT0_A -->
+      <dbdot><layer_id>2</layer_id><latcoord n="10" m="0" l="1"/><physloc x="38.4" y="2.25"/><color>#ffffcc66</color></dbdot>
+      <!-- output OUT0_B -->
+      <dbdot><layer_id>2</layer_id><latcoord n="10" m="1" l="1"/><physloc x="38.4" y="9.93"/><color>#ffffcc66</color></dbdot>
+    </layer>
+    <layer type="Electrode"/>
+  </design>
+</siqad>

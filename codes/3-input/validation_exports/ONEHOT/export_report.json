@@ -1,0 +1,39 @@
+{
+  "gate": "ONEHOT",
+  "samples_requested": 1000,
+  "samples_processed": 1000,
+  "raw_post_f12_candidates": 90,
+  "exported_candidates": 20,
+  "elapsed_seconds": 163.0981090068817,
+  "after_counts": {
+    "F1": 944,
+    "F2": 944,
+    "F3": 546,
+    "F4": 381,
+    "F5": 381,
+    "F6": 373,
+    "F7": 373,
+    "F8": 366,
+    "F9": 313,
+    "F10": 313,
+    "F11": 313,
+    "F12": 90
+  },
+  "validation_sheet": "validation_exports\\ONEHOT\\validation_sheet.csv",
+  "profile": "balanced",
+  "parameters": {
+    "d_min": 1.0,
+    "wire_forbidden_radius": 0.4,
+    "positive_charge_margin": 0.0,
+    "charge_min_fraction": 0.0,
+    "charge_max_fraction": 1.0,
+    "charge_count_conflict_radius": null,
+    "input_disturbance_limit": 0.3,
+    "connectivity_radius": 4.0,
+    "pressure_margin": 0.0,
+    "energy_bound_margin": 0.5,
+    "f11_mode": "counted",
+    "f11_min_support_states": 1,
+    "io_instability_margin": 0.005
+  }
+}

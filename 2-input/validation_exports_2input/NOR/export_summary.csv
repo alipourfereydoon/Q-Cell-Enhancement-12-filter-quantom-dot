@@ -1,0 +1,21 @@
+gate,candidate_id,energy_margin,canvas_indices,candidate_sqd
+NOR,1,-0.001636460941699891,1 53 93,validation_exports_2input\NOR\candidates\candidate_000001\candidate.sqd
+NOR,2,-0.02847243394550958,34 55 72,validation_exports_2input\NOR\candidates\candidate_000002\candidate.sqd
+NOR,3,-0.0032354451041924914,11 93 94,validation_exports_2input\NOR\candidates\candidate_000003\candidate.sqd
+NOR,4,-0.0033981590332752276,52 67 94,validation_exports_2input\NOR\candidates\candidate_000004\candidate.sqd
+NOR,5,-0.005585378597028567,53 88 95,validation_exports_2input\NOR\candidates\candidate_000005\candidate.sqd
+NOR,6,-0.01571790826804942,0 20 84,validation_exports_2input\NOR\candidates\candidate_000006\candidate.sqd
+NOR,7,-0.02935639573593196,12 36 83,validation_exports_2input\NOR\candidates\candidate_000007\candidate.sqd
+NOR,8,-0.021073539984327816,23 73 94,validation_exports_2input\NOR\candidates\candidate_000008\candidate.sqd
+NOR,9,-0.0076291183709937815,27 63 94,validation_exports_2input\NOR\candidates\candidate_000009\candidate.sqd
+NOR,10,-0.00555492306210037,71 85 96,validation_exports_2input\NOR\candidates\candidate_000010\candidate.sqd
+NOR,11,-0.007828728696896992,41 62 80,validation_exports_2input\NOR\candidates\candidate_000011\candidate.sqd
+NOR,12,-0.015261539937259316,84 89 98,validation_exports_2input\NOR\candidates\candidate_000012\candidate.sqd
+NOR,13,-0.016910943143199964,15 19 71,validation_exports_2input\NOR\candidates\candidate_000013\candidate.sqd
+NOR,14,-0.01789064661384754,0 63 84,validation_exports_2input\NOR\candidates\candidate_000014\candidate.sqd
+NOR,15,-0.015898352942023575,22 50 73,validation_exports_2input\NOR\candidates\candidate_000015\candidate.sqd
+NOR,16,-0.019334635530873667,8 58 82,validation_exports_2input\NOR\candidates\candidate_000016\candidate.sqd
+NOR,17,-0.004302058113306861,24 80 95,validation_exports_2input\NOR\candidates\candidate_000017\candidate.sqd
+NOR,18,-0.01064445756527821,25 73 79,validation_exports_2input\NOR\candidates\candidate_000018\candidate.sqd
+NOR,19,-0.003619449739791003,17 67 95,validation_exports_2input\NOR\candidates\candidate_000019\candidate.sqd
+NOR,20,-0.009218969302938085,66 68 73,validation_exports_2input\NOR\candidates\candidate_000020\candidate.sqd

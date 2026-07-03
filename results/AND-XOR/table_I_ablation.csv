@@ -1,2 +1,0 @@
-Benchmark,|Ld|,Processed,After F1,After F2,After F3,After F4,After F5,After F6,After F7,After F8,After F9,After F10,After F11,After F12,Selected Candidates,Candidates,Total Time [s]
-AND-XOR,16701685,100000,85282,85282,80504,80175,58857,29353,8925,4485,1957,1321,1321,7,,7,1605.2607

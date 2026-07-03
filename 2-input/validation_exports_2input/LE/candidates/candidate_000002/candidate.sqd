@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<siqad>
+  <program>
+    <file_purpose>save</file_purpose>
+    <version>0.3.3</version>
+    <date>2026-06-24 09:29:05</date>
+  </program>
+  <gui>
+    <zoom>0.05</zoom>
+    <displayed_region x1="-215.2" y1="-174.55" x2="199.84" y2="156.01"/>
+    <scroll x="0" y="0"/>
+  </gui>
+  <layers>
+    <layer_prop>
+      <name>Lattice</name>
+      <type>Lattice</type>
+      <role>Design</role>
+      <zoffset>0</zoffset>
+      <zheight>0</zheight>
+      <visible>1</visible>
+      <active>0</active>
+      <lat_vec>
+        <a1 x="3.84" y="0"/>
+        <a2 x="0" y="7.68"/>
+        <N>2</N>
+        <b1 x="0" y="0"/>
+        <b2 x="0" y="2.25"/>
+      </lat_vec>
+    </layer_prop>
+    <layer_prop>
+      <name>Screenshot Overlay</name>
+      <type>Misc</type>
+      <role>Overlay</role>
+      <zoffset>0</zoffset>
+      <zheight>0</zheight>
+      <visible>1</visible>
+      <active>0</active>
+    </layer_prop>
+    <layer_prop>
+      <name>Surface</name>
+      <type>DB</type>
+      <role>Design</role>
+      <zoffset>0</zoffset>
+      <zheight>0</zheight>
+      <visible>1</visible>
+      <active>0</active>
+    </layer_prop>
+    <layer_prop>
+      <name>Metal</name>
+      <type>Electrode</type>
+      <role>Design</role>
+      <zoffset>1000</zoffset>
+      <zheight>100</zheight>
+      <visible>1</visible>
+      <active>0</active>
+    </layer_prop>
+  </layers>
+  <design>
+    <layer type="Lattice"/>
+    <layer type="Misc"/>
+    <layer type="DB">
+      <!-- skeleton_input IN0_A -->
+      <dbdot>
+        <layer_id>2</layer_id>
+        <latcoord n="-30" m="6" l="1"/>
+        <physloc x="-115.2" y="48.33"/>
+        <color>#ff66ccff</color>
+      </dbdot>
+      <!-- skeleton_input IN0_B -->
+      <dbdot>
+        <layer_id>2</layer_id>
+        <latcoord n="-30" m="7" l="1"/>
+        <physloc x="-115.2" y="56.01"/>
+        <color>#ff66ccff</color>
+      </dbdot>
+      <!-- skeleton_input IN1_A -->
+      <dbdot>
+        <layer_id>2</layer_id>
+        <latcoord n="-30" m="-7" l="1"/>
+        <physloc x="-115.2" y="-51.51"/>
+        <color>#ff66ccff</color>
+      </dbdot>
+      <!-- skeleton_input IN1_B -->
+      <dbdot>
+        <layer_id>2</layer_id>
+        <latcoord n="-30" m="-6" l="1"/>
+        <physloc x="-115.2" y="-43.83"/>
+        <color>#ff66ccff</color>
+      </dbdot>
+      <!-- skeleton_output OUT0_A -->
+      <dbdot>
+        <layer_id>2</layer_id>
+        <latcoord n="26" m="0" l="1"/>
+        <physloc x="99.84" y="2.25"/>
+        <color>#ffffcc66</color>
+      </dbdot>
+      <!-- skeleton_output OUT0_B -->
+      <dbdot>
+        <layer_id>2</layer_id>
+        <latcoord n="26" m="1" l="1"/>
+        <physloc x="99.84" y="9.93"/>
+        <color>#ffffcc66</color>
+      </dbdot>
+      <!-- skeleton_wire WIRE0 -->
+      <dbdot>
+        <layer_id>2</layer_id>
+        <latcoord n="-22" m="5" l="1"/>
+        <physloc x="-84.48" y="40.65"/>
+        <color>#ffc8c8c8</color>
+      </dbdot>
+      <!-- skeleton_wire WIRE1 -->
+      <dbdot>
+        <layer_id>2</layer_id>
+        <latcoord n="-14" m="3" l="1"/>
+        <physloc x="-53.76" y="25.29"/>
+        <color>#ffc8c8c8</color>
+      </dbdot>
+      <!-- skeleton_wire WIRE2 -->
+      <dbdot>
+        <layer_id>2</layer_id>
+        <latcoord n="-6" m="1" l="1"/>
+        <physloc x="-23.04" y="9.93"/>
+        <color>#ffc8c8c8</color>
+      </dbdot>
+      <!-- skeleton_wire WIRE3 -->
+      <dbdot>
+        <layer_id>2</layer_id>
+        <latcoord n="-22" m="-6" l="1"/>
+        <physloc x="-84.48" y="-43.83"/>
+        <color>#ffc8c8c8</color>
+      </dbdot>
+      <!-- skeleton_wire WIRE4 -->
+      <dbdot>
+        <layer_id>2</layer_id>
+        <latcoord n="-14" m="-4" l="1"/>
+        <physloc x="-53.76" y="-28.47"/>
+        <color>#ffc8c8c8</color>
+      </dbdot>
+      <!-- skeleton_wire WIRE5 -->
+      <dbdot>
+        <layer_id>2</layer_id>
+        <latcoord n="-6" m="-2" l="1"/>
+        <physloc x="-23.04" y="-13.11"/>
+        <color>#ffc8c8c8</color>
+      </dbdot>
+      <!-- skeleton_wire WIRE6 -->
+      <dbdot>
+        <layer_id>2</layer_id>
+        <latcoord n="2" m="0" l="1"/>
+        <physloc x="7.68" y="2.25"/>
+        <color>#ffc8c8c8</color>
+      </dbdot>
+      <!-- skeleton_wire WIRE7 -->
+      <dbdot>
+        <layer_id>2</layer_id>
+        <latcoord n="10" m="0" l="1"/>
+        <physloc x="38.4" y="2.25"/>
+        <color>#ffc8c8c8</color>
+      </dbdot>
+      <!-- skeleton_wire WIRE8 -->
+      <dbdot>
+        <layer_id>2</layer_id>
+        <latcoord n="18" m="0" l="1"/>
+        <physloc x="69.12" y="2.25"/>
+        <color>#ffc8c8c8</color>
+      </dbdot>
+      <!-- canvas CANVAS0 -->
+      <dbdot>
+        <layer_id>2</layer_id>
+        <latcoord n="-2" m="-8" l="1"/>
+        <physloc x="-7.68" y="-59.19"/>
+        <color>#ff66dd66</color>
+      </dbdot>
+      <!-- canvas CANVAS1 -->
+      <dbdot>
+        <layer_id>2</layer_id>
+        <latcoord n="14" m="-10" l="1"/>
+        <physloc x="53.76" y="-74.55"/>
+        <color>#ff66dd66</color>
+      </dbdot>
+      <!-- canvas CANVAS2 -->
+      <dbdot>
+        <layer_id>2</layer_id>
+        <latcoord n="22" m="2" l="1"/>
+        <physloc x="84.48" y="17.61"/>
+        <color>#ff66dd66</color>
+      </dbdot>
+    </layer>
+    <layer type="Electrode"/>
+  </design>
+</siqad>

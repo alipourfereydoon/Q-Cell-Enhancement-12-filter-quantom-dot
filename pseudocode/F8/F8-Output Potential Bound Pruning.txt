@@ -1,0 +1,27 @@
+ F8_OutputPotentialBoundPruning
+Input:
+    Layout L
+    Boolean function f
+    Skeleton S
+    Physical parameters P
+
+Output:
+    TRUE  iff required output charge state is incompatible with output potential bounds
+    FALSE otherwise
+
+1   for each input pattern x in B^n do
+2       for each output site o in OutputPins(S) do
+3           V_skel <- SkeletonOutputPotential(o, x, f(x))
+4           V_canvas_min <- MinimumCanvasPotentialAtOutput(o, L, P)
+5           V_canvas_max <- MaximumCanvasPotentialAtOutput(o, L, P)
+
+6           V_tot_min <- V_skel + V_canvas_min
+7           V_tot_max <- V_skel + V_canvas_max
+
+8           if RequiredOutputStateIsImpossible(o, x, f(x), V_tot_min, V_tot_max, P) then
+9               return TRUE
+10          end if
+11      end for
+12  end for
+
+13  return FALS

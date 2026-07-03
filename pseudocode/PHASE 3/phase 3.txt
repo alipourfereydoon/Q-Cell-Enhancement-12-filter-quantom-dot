@@ -1,0 +1,24 @@
+Phase3_Prune
+Input:
+    Layout L
+    Boolean function f
+    Skeleton S
+    Canvas C
+    Number of canvas SiDBs d
+    Physical parameters P
+
+Output:
+    TRUE  iff layout L must be discarded in Phase 3
+    FALSE otherwise
+
+1   // F11: Physical Infeasibility Pruning
+2   if F11_PhysicalInfeasibilityPruning(L, f, S, d, P) = TRUE then
+3       return TRUE
+4   end if
+
+5   // F12: I/O Signal Instability Pruning
+6   if F12_IOSignalInstabilityPruning(L, f, S, d, P) = TRUE then
+7       return TRUE
+8   end if
+
+9   return FALSE

@@ -1,0 +1,299 @@
+اجرای تک‌تک گیت‌ها (فقط جداول):
+
+# ── 2-input, 1-output ──
+python run_gate_report_2input.py --gate AND   --samples 100000 --workers 4 --strict-profile balanced
+python run_gate_report_2input.py --gate NAND  --samples 100000 --workers 4 --strict-profile balanced
+python run_gate_report_2input.py --gate OR    --samples 100000 --workers 4 --strict-profile balanced
+python run_gate_report_2input.py --gate NOR   --samples 100000 --workers 4 --strict-profile balanced
+python run_gate_report_2input.py --gate XOR   --samples 100000 --workers 4 --strict-profile balanced
+python run_gate_report_2input.py --gate XNOR  --samples 100000 --workers 4 --strict-profile balanced
+python run_gate_report_2input.py --gate LT    --samples 100000 --workers 4 --strict-profile balanced
+python run_gate_report_2input.py --gate GT    --samples 100000 --workers 4 --strict-profile balanced
+python run_gate_report_2input.py --gate LE    --samples 100000 --workers 4 --strict-profile balanced
+python run_gate_report_2input.py --gate GE    --samples 100000 --workers 4 --strict-profile balanced
+
+# ── 2-input, 2-output ──
+python run_gate_report_2input.py --gate DOUBLE_WIRE --samples 100000 --workers 4 --strict-profile balanced
+python run_gate_report_2input.py --gate CX          --samples 100000 --workers 4 --strict-profile balanced
+python run_gate_report_2input.py --gate HA          --samples 100000 --workers 4 --strict-profile balanced
+
+# ── 1-input, 1-output ──
+python run_gate_report_2input.py --gate WIRE  --samples 100000 --workers 4 --strict-profile balanced
+python run_gate_report_2input.py --gate INV   --samples 100000 --workers 4 --strict-profile balanced
+
+
+
+-----------------------------------------------------------------------------------------------------------
+اجرای تمام گیت‌ها به‌صورت یکجا:
+
+python run_gate_report_2input.py --gate ALL --samples 100000 --workers 4 --strict-profile balanced
+
+-----------------------------------------------------------------------------------------------------------
+اجرا با تنظیمات کامل فیلترها:
+
+python run_gate_report_2input.py \
+  --gate ALL \
+  --samples 200000 \
+  --workers 8 \
+  --chunksize 3000 \
+  --seed 42 \
+  --sim-time 0.01 \
+  --canvas-d 3 \
+  --strict-profile balanced \
+  --io-margin 0.0001 \
+  --pressure-margin 0.0 \
+  --connectivity-radius 12.5 \
+  --d-min 2.5 \
+  --positive-charge-margin 0.01 \
+  --charge-min-fraction 0.0 \
+  --charge-max-fraction 1.0 \
+  --charge-count-conflict-radius 3.0 \
+  --input-disturbance 0.4 \
+  --energy-margin 0.05 \
+  --f11-mode counted \
+  --f11-min-support-states 1 \
+  --selection-target 50 \
+  --selection-min-margin 0.001
+
+-----------------------------------------------------------------------------------------------
+خروجی SiQAD برای تک‌تک گیت‌ها:
+
+python export_siqad_validation_2input.py --gate AND  --samples 100000 --workers 4 --max-candidates 20
+python export_siqad_validation_2input.py --gate OR   --samples 100000 --workers 4 --max-candidates 20
+python export_siqad_validation_2input.py --gate HA   --samples 100000 --workers 4 --max-candidates 20
+python export_siqad_validation_2input.py --gate WIRE --samples 100000 --workers 4 --max-candidates 20
+
+
+---------------------------------------------------------------------------------
+خروجی SiQAD برای تمام گیت‌ها:
+
+
+python export_siqad_validation_2input.py \
+  --gate ALL \
+  --samples 100000 \
+  --workers 4 \
+  --max-candidates 20 \
+  --strict-profile balanced \
+  --io-margin 0.0001 \
+  --canvas-d 3
+
+-----------------------------------------
+تحلیل نتایج:
+
+python analyze_siqad_results.py --root validation_exports_2input --all
+
+
+-------------------------------------------------------------------
+
+دستور اصلاح‌شده — مرحله ۱: پارامترهای آزاد (پیشنهادی)
+python export_siqad_validation_2input.py \
+  --gate ALL \
+  --samples 500000 \
+  --workers 4 \
+  --chunksize 3000 \
+  --max-candidates 20 \
+  --canvas-d 3 \
+  --seed 12345 \
+  --strict-profile safe \
+  --io-margin 0.02 \
+  --pressure-margin 0.0 \
+  --f11-mode counted \
+  --f11-min-support-states 1 \
+  --selection-target 20 \
+  --selection-min-margin 0.0
+
+
+
+---------------------------------------------------------------------
+دستور اصلاح‌شده — مرحله ۲: حداکثر آزادی
+
+python export_siqad_validation_2input.py \
+  --gate ALL \
+  --samples 1000000 \
+  --workers 4 \
+  --chunksize 5000 \
+  --max-candidates 20 \
+  --canvas-d 3 \
+  --seed 12345 \
+  --strict-profile safe \
+  --io-margin 0.05 \
+  --pressure-margin 0.0 \
+  --d-min 1.0 \
+  --positive-charge-margin 0.0 \
+  --input-disturbance 1.0 \
+  --connectivity-radius 25.0 \
+  --f11-mode counted \
+  --f11-min-support-states 1 \
+  --selection-target 20 \
+  --selection-min-margin 0.0
+
+
+-----------------------------------------------------------
+
+دستورات تک‌تک گیت‌ها (هر کدام بهینه‌شده)
+گیت‌های ساده (معمولاً مشکل ندارند
+
+
+# AND
+python export_siqad_validation_2input.py \
+  --gate AND --samples 200000 --workers 4 --max-candidates 20 \
+  --strict-profile safe --io-margin 0.02
+
+# OR
+python export_siqad_validation_2input.py \
+  --gate OR --samples 200000 --workers 4 --max-candidates 20 \
+  --strict-profile safe --io-margin 0.02
+
+# NAND
+python export_siqad_validation_2input.py \
+  --gate NAND --samples 200000 --workers 4 --max-candidates 20 \
+  --strict-profile safe --io-margin 0.02
+
+# NOR
+python export_siqad_validation_2input.py \
+  --gate NOR --samples 200000 --workers 4 --max-candidates 20 \
+  --strict-profile safe --io-margin 0.02
+
+# WIRE
+python export_siqad_validation_2input.py \
+  --gate WIRE --samples 200000 --workers 4 --max-candidates 20 \
+  --strict-profile safe --io-margin 0.02
+
+# INV
+python export_siqad_validation_2input.py \
+  --gate INV --samples 200000 --workers 4 --max-candidates 20 \
+  --strict-profile safe --io-margin 0.02
+
+# LE
+python export_siqad_validation_2input.py \
+  --gate LE --samples 200000 --workers 4 --max-candidates 20 \
+  --strict-profile safe --io-margin 0.02
+
+# GE
+python export_siqad_validation_2input.py \
+  --gate GE --samples 200000 --workers 4 --max-candidates 20 \
+  --strict-profile safe --io-margin 0.02
+
+
+-------------------------------------------------
+گیت‌های دشوار (نیاز به نمونه بیشتر و فیلتر آزادتر):
+
+# XOR — دشوارترین گیت ۲-ورودی
+python export_siqad_validation_2input.py \
+  --gate XOR --samples 1000000 --workers 4 --max-candidates 20 \
+  --strict-profile safe --io-margin 0.05 \
+  --d-min 1.0 --input-disturbance 1.0 \
+  --connectivity-radius 25.0 \
+  --f11-mode counted
+
+# XNOR
+python export_siqad_validation_2input.py \
+  --gate XNOR --samples 1000000 --workers 4 --max-candidates 20 \
+  --strict-profile safe --io-margin 0.05 \
+  --d-min 1.0 --input-disturbance 1.0 \
+  --connectivity-radius 25.0 \
+  --f11-mode counted
+
+# LT (A < B)
+python export_siqad_validation_2input.py \
+  --gate LT --samples 500000 --workers 4 --max-candidates 20 \
+  --strict-profile safe --io-margin 0.05 \
+  --d-min 1.0 --input-disturbance 1.0 \
+  --connectivity-radius 25.0 \
+  --f11-mode counted
+
+# GT (A > B)
+python export_siqad_validation_2input.py \
+  --gate GT --samples 500000 --workers 4 --max-candidates 20 \
+  --strict-profile safe --io-margin 0.05 \
+  --d-min 1.0 --input-disturbance 1.0 \
+  --connectivity-radius 25.0 \
+  --f11-mode counted
+
+# DOUBLE_WIRE (2-in, 2-out)
+python export_siqad_validation_2input.py \
+  --gate DOUBLE_WIRE --samples 500000 --workers 4 --max-candidates 20 \
+  --strict-profile safe --io-margin 0.05 \
+  --d-min 1.0 --input-disturbance 1.0 \
+  --connectivity-radius 25.0 \
+  --f11-mode counted
+
+# CX (crossover, 2-in, 2-out)
+python export_siqad_validation_2input.py \
+  --gate CX --samples 1000000 --workers 4 --max-candidates 20 \
+  --strict-profile safe --io-margin 0.05 \
+  --d-min 1.0 --input-disturbance 1.0 \
+  --connectivity-radius 25.0 \
+  --f11-mode counted
+
+# HA (half adder, 2-in, 2-out)
+python export_siqad_validation_2input.py \
+  --gate HA --samples 1000000 --workers 4 --max-candidates 20 \
+  --strict-profile safe --io-margin 0.05 \
+  --d-min 1.0 --input-disturbance 1.0 \
+  --connectivity-radius 25.0 \
+  --f11-mode counted
+
+
+---------------------------------
+
+دستور همه‌گیت‌ها با بیشترین شانس موفقیت
+
+python export_siqad_validation_2input.py \
+  --gate ALL \
+  --samples 1000000 \
+  --workers 4 \
+  --chunksize 5000 \
+  --max-candidates 20 \
+  --canvas-d 3 \
+  --seed 12345 \
+  --strict-profile safe \
+  --io-margin 0.05 \
+  --pressure-margin 0.0 \
+  --d-min 1.0 \
+  --positive-charge-margin 0.0 \
+  --charge-min-fraction 0.0 \
+  --charge-max-fraction 1.0 \
+  --input-disturbance 1.0 \
+  --connectivity-radius 25.0 \
+  --energy-margin 1.0 \
+  --f11-mode counted \
+  --f11-min-support-states 1 \
+  --selection-target 20 \
+  --selection-min-margin 0.0
+
+---------------------------------------------------------
+همین دستور برای run_gate_report_2input.py:
+
+
+python run_gate_report_2input.py \
+  --gate ALL \
+  --samples 1000000 \
+  --workers 4 \
+  --chunksize 5000 \
+  --canvas-d 3 \
+  --seed 12345 \
+  --sim-time 0.01 \
+  --strict-profile safe \
+  --io-margin 0.05 \
+  --pressure-margin 0.0 \
+  --d-min 1.0 \
+  --positive-charge-margin 0.0 \
+  --charge-min-fraction 0.0 \
+  --charge-max-fraction 1.0 \
+  --input-disturbance 1.0 \
+  --connectivity-radius 25.0 \
+  --energy-margin 1.0 \
+  --f11-mode counted \
+  --f11-min-support-states 1 \
+  --selection-target 20 \
+  --selection-min-margin 0.0
+
+
+
+
+
+===================================
+
+تغییرات: فقط --selection-target 20 و --selection-min-margin 0.0 حذف شدند. وقتی که این دو مورد را حذف می کنم در نهایت candidate ساخته می شود ولی candidate های ساخته شده مورد تایید نرم افزار siqad نیست و اعلام می کند که physically vallid no . مگر نباید از layout های ساخته شده و مورد در فایل skeleton_sqd_files استفاده کند ؟ پس چرا اسکلتون تغییر کرده ؟ اگر نیاز هست فایل ها تغییر کنند لذا کل فایل ها را مجدد تصحیح شده به من بده
+

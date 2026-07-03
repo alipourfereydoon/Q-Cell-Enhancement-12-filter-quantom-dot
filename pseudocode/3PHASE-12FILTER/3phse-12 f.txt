@@ -1,0 +1,46 @@
+ QuickCell-12
+Input:
+    Boolean function f : B^n -> B^m
+    Skeleton layout S with canvas C
+    Number of canvas SiDBs d
+    Physical parameters P = {mu_minus, mu_plus, lambda_tf, epsilon_r}
+
+Output:
+    Set L* of all valid SiDB standard-cell implementations of f
+
+1   L* <- empty set
+2   Ld <- { S U A | A subset of C, |A| = d }
+
+3   for each layout L in Ld do
+
+4       // ============================
+5       // Phase 1: Geometric and Structural Pruning
+6       // ============================
+7       if Phase1_Prune(L, S, C, d, P) = TRUE then
+8           continue with next layout
+9       end if
+
+10      // ============================
+11      // Phase 2: Analytical Physics-Based Pruning
+12      // ============================
+13      if Phase2_Prune(L, f, S, C, d, P) = TRUE then
+14          continue with next layout
+15      end if
+
+16      // ============================
+17      // Phase 3: Enumerative Physical Pruning
+18      // ============================
+19      if Phase3_Prune(L, f, S, C, d, P) = TRUE then
+20          continue with next layout
+21      end if
+
+22      // ============================
+23      // Exact Physical Verification
+24      // ============================
+25      if ExactPhysicalVerification(L, f, P) = TRUE then
+26          L* <- L* U {L}
+27      end if
+
+28  end for
+
+29  return L*

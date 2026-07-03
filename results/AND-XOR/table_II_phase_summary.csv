@@ -1,5 +1,0 @@
-Phase,Filters,Input Layouts,Output Layouts,Retention Ratio [%],Pruning Ratio [%],Reduction Factor,Runtime [s]
-Phase 1,F1-F4,100000,80175,80.175,19.825,1.2473,
-Phase 2,F5-F10,80175,1321,1.6476,98.3524,60.6927,
-Phase 3,F11-F12,1321,7,0.5299,99.4701,188.7143,
-Total,F1-F12,100000,7,0.007,99.993,14285.7143,1605.2607

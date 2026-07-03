@@ -1,0 +1,44 @@
+Phase2_Prune
+Input:
+    Layout L
+    Boolean function f
+    Skeleton S
+    Canvas C
+    Number of canvas SiDBs d
+    Physical parameters P
+
+Output:
+    TRUE  iff layout L must be discarded in Phase 2
+    FALSE otherwise
+
+1   // F5: Charge Count Bound Pruning
+2   if F5_ChargeCountBoundPruning(L, f, d, P) = TRUE then
+3       return TRUE
+4   end if
+
+5   // F6: Input Pin Disturbance Pruning
+6   if F6_InputPinDisturbancePruning(L, f, S, P) = TRUE then
+7       return TRUE
+8   end if
+
+9   // F7: Electrostatic Path Connectivity Pruning
+10  if F7_ElectrostaticPathConnectivityPruning(L, S, P) = TRUE then
+11      return TRUE
+12  end if
+
+13  // F8: Output Potential Bound Pruning
+14  if F8_OutputPotentialBoundPruning(L, f, S, P) = TRUE then
+15      return TRUE
+16  end if
+
+17  // F9: Electrostatic Pressure at Output Pruning
+18  if F9_ElectrostaticPressurePruning(L, f, S, P) = TRUE then
+19      return TRUE
+20  end if
+
+21  // F10: Energy Lower Bound Pruning
+22  if F10_EnergyLowerBoundPruning(L, f, S, P) = TRUE then
+23      return TRUE
+24  end if
+
+25  return FALSE

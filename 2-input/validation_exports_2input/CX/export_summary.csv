@@ -1,0 +1,14 @@
+gate,candidate_id,energy_margin,canvas_indices,candidate_sqd
+CX,1,-0.014451623475948416,105 131 177,validation_exports_2input\CX\candidates\candidate_000001\candidate.sqd
+CX,2,-0.0015181822825609537,141 147 163,validation_exports_2input\CX\candidates\candidate_000002\candidate.sqd
+CX,3,-0.009744413331751023,107 108 148,validation_exports_2input\CX\candidates\candidate_000003\candidate.sqd
+CX,4,-0.023343437911396592,107 110 115,validation_exports_2input\CX\candidates\candidate_000004\candidate.sqd
+CX,5,-0.02610770631172299,107 149 180,validation_exports_2input\CX\candidates\candidate_000005\candidate.sqd
+CX,6,-0.02461129728329947,3 123 131,validation_exports_2input\CX\candidates\candidate_000006\candidate.sqd
+CX,7,-0.017090487361159923,88 106 148,validation_exports_2input\CX\candidates\candidate_000007\candidate.sqd
+CX,8,-0.016279598500842596,127 141 148,validation_exports_2input\CX\candidates\candidate_000008\candidate.sqd
+CX,9,-0.029734769161708918,51 115 124,validation_exports_2input\CX\candidates\candidate_000009\candidate.sqd
+CX,10,-0.003113122705557636,105 143 148,validation_exports_2input\CX\candidates\candidate_000010\candidate.sqd
+CX,11,-0.02959569936000417,24 113 122,validation_exports_2input\CX\candidates\candidate_000011\candidate.sqd
+CX,12,-0.008896713015945412,123 132 144,validation_exports_2input\CX\candidates\candidate_000012\candidate.sqd
+CX,13,-0.01635030506273516,45 106 115,validation_exports_2input\CX\candidates\candidate_000013\candidate.sqd

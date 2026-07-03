@@ -1,0 +1,2 @@
+Benchmark,|Ld|,Processed,After F1,After F2,After F3,After F4,After F5,After F6,After F7,After F8,After F9,After F10,After F11,After F12,Selected Candidates,Candidates,Total Time [s]
+OR-AND,16701685,100000,52605,52605,30317,22580,19637,6722,6722,6718,5718,2590,2590,3,,3,1391.6676

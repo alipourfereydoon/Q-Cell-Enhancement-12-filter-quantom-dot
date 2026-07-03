@@ -1,0 +1,73 @@
+previece : 
+
+python run_gate_report.py --gate ALL --samples 100000 --workers 4 --chunksize 2000 --strict-profile strict
+
+
+python run_gate_report.py --gate AND3 --samples 100000 --workers 4 --chunksize 2000 --strict-profile strict
+
+python run_gate_report.py --gate DOT --samples 100000 
+--workers 4 --chunksize 2000 --strict-profile balanced --io-margin 0.0001   
+
+-----------------------------------------------------------------------------------------
+new commands : 
+خروجی SiQAD برای AND3 با io-margin سخت‌گیرانه
+
+python export_siqad_validation.py --gate AND3 --samples 100000 --workers 4 --chunksize 2000 --strict-profile balanced --io-margin 0.0001 --max-candidates 50
+
+
+
+
+خروجی SiQAD برای همه گیت‌ها
+python export_siqad_validation.py --gate ALL --samples 100000 --workers 4 --chunksize 2000 --strict-profile balanced --io-margin 0.0001 --max-candidates 50
+
+
+
+اگر می‌خواهی فقط 20 candidate با بهترین energy margin صادر شود
+python export_siqad_validation.py --gate AND3 --samples 100000 --workers 4 --chunksize 2000 --strict-profile balanced --io-margin 0.0001 --selection-target 20 --max-candidates 20
+
+----------------------------------------------------------------------------------------------
+new 2 command :
+python run_gate_report.py --gate AND3 --samples 100000 --pressure-margin 0.02 --workers 4 --chunksize 2000 --strict-profile balanced --io-margin 0.0003
+
+
+validation with siqad :
+
+python export_siqad_validation.py --gate AND3 --samples 100000 --workers 4 --chunksize 2000 --strict-profile balanced --io-margin 0.0001 --max-candidates 50
+
+
+python export_siqad_validation.py --gate AND3 --samples 100000 --workers 4 --chunksize 2000 --strict-profile balanced --io-margin 0.0001 --selection-target 20 --max-candidates 20
+
+
+-----------------------------------------------------------------------------------
+
+final
+
+ python run_gate_report.py --gate AND3 --samples 100000 --workers 4 --chunksize 2000 --strict-profile balanced --io-margin 0.0001 --connectivity-radius 9.0 --d-min 3.1 --positive-charge-margin 
+0.02 --charge-min-fraction 0.25 --charge-max-fraction 1.0 --charge-count-conflict-radius 4.3 --input-disturbance 0.001 --pressure-margin 0.001 --energy-margin 0.01 --f11-mode strict-hop --f11-min-support-states 1
+
+
+
+python export_siqad_validation.py --gate AND3 --samples 100000 --workers 4 --chunksize 2000 --strict-profile balanced --io-margin 0.0001 --connectivity-radius 9.0 --d-min 3.1 --positive-charge-margin 0.02 --charge-min-fraction 0.25 --charge-max-fraction 1.0 --charge-count-conflict-radius 4.3 --input-disturbance 0.001 --pressure-margin 0.001 --energy-margin 0.01 --f11-mode strict-hop --f11-min-support-states 2 --selection-target 20 --max-candidates 20 --output-dir validation_exports
+
+
+all gates :
+
+python export_siqad_validation.py --gate ALL --samples 100000 --workers 4 --chunksize 2000 --strict-profile balanced --io-margin 0.0001 --connectivity-radius 9.0 --d-min 3.1 --positive-charge-margin 0.02 --charge-min-fraction 0.25 --charge-max-fraction 1.0 --charge-count-conflict-radius 4.3 --input-disturbance 0.001 --pressure-margin 0.001 --energy-margin 0.01 --f11-mode strict-hop --f11-min-support-states 2 --selection-target 20 --max-candidates 20 --output-dir validation_exports
+
+
+validation : 
+python analyze_siqad_results.py --sheet validation_exports\AND3\validation_sheet.csv
+
+
+python analyze_siqad_results.py --root validation_exports --all
+
+
+
+
+
+
+python export_siqad_validation.py --gate AND3 --samples 100000 --workers 4 --chunksize 2000 --strict-profile balanced --io-margin 0.0001 --connectivity-radius 9.0 --d-min 3.1 --positive-charge-margin 0.02 --charge-min-fraction 0.25 --charge-max-fraction 1.0 --charge-count-conflict-radius 4.3 --input-disturbance 0.001 --pressure-margin 0.001 --energy-margin 0.01 --f11-mode strict-hop --f11-min-support-states 2 --selection-target 20 --max-candidates 20 --output-dir validation_exports
+
+
+all gates : 
+python export_siqad_validation.py --gate ALL --samples 100000 --workers 4 --chunksize 2000 --strict-profile balanced --io-margin 0.0001 --connectivity-radius 9.0 --d-min 3.1 --positive-charge-margin 0.02 --charge-min-fraction 0.25 --charge-max-fraction 1.0 --charge-count-conflict-radius 4.3 --input-disturbance 0.001 --pressure-margin 0.001 --energy-margin 0.01 --f11-mode strict-hop --f11-min-support-states 2 --selection-target 20 --max-candidates 20 --output-dir validation_exports

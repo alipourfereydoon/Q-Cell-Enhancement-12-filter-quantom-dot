@@ -1,0 +1,24 @@
+F6_InputPinDisturbancePruning
+Input:
+    Layout L
+    Boolean function f
+    Skeleton S
+    Physical parameters P
+
+Output:
+    TRUE  iff canvas SiDBs destabilize required input charge states
+    FALSE otherwise
+
+1   for each input pattern x in B^n do
+2       for each input pin site i in InputPins(S) do
+3           V_skel <- SkeletonInputPotential(i, x)
+4           V_canvas_max <- MaximumCanvasPotentialAtInput(i, L, P)
+5           V_total <- V_skel + V_canvas_max
+
+6           if RequiredInputStateBecomesInvalid(i, x, V_total, P) then
+7               return TRUE
+8           end if
+9       end for
+10  end for
+
+11  return FALSE

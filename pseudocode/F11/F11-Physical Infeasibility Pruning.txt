@@ -1,0 +1,30 @@
+F11_PhysicalInfeasibilityPruning
+Input:
+    Layout L
+    Boolean function f
+    Skeleton S
+    Number of canvas SiDBs d
+    Physical parameters P
+
+Output:
+    TRUE  iff no physically valid canvas charge assignment exists
+    FALSE otherwise
+
+1   for each input pattern x in B^n do
+2       n_S <- SkeletonChargeDistributionFor(x, f(x))
+3       feasible <- FALSE
+
+4       for each canvas charge distribution n_A in {-1, 0}^d do
+5           n_L <- n_S U n_A
+6           if PhysValid(L, n_L, P) = TRUE then
+7               feasible <- TRUE
+8               break
+9           end if
+10      end for
+
+11      if feasible = FALSE then
+12          return TRUE
+13      end if
+14  end for
+
+15  return FALSE
